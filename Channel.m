@@ -10,8 +10,10 @@
 
 @implementation Channel
 
-const NSString *GeneratorElementName=@"generator";
-const NSString *ItemsElementName=@"item";
+@dynamic Name;
++(NSString *)Name{
+    return @"channel";
+}
 
 @dynamic TitleElementName;
 +(NSString *)TitleElementName{
@@ -33,6 +35,15 @@ return @"title";
     return @"link";
 }
 
+@dynamic GeneratorElementName;
++(NSString *)GeneratorElementName{
+    return @"generator";
+}
+
+@dynamic ItemsElementName;
++(NSString *)ItemsElementName{
+    return @"item";
+}
 
 
 @end

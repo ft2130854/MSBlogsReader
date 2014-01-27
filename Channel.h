@@ -11,6 +11,9 @@
 @interface Channel : NSObject{
 
 }
+@property(nonatomic,readonly) NSString *Name;
++(NSString *)Name;
+
 @property (nonatomic) NSString *TitleElementName;
 +(NSString *)TitleElementName;
 

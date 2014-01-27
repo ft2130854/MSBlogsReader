@@ -24,6 +24,7 @@
 		8B1DE800185A9DED009DEEC6 /* IOSExercise_allanxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DE7FF185A9DED009DEEC6 /* IOSExercise_allanxingTests.m */; };
 		8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
+		8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B943FA918960A9D0010BA5B /* libxml2.dylib */; };
 		8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6A0DD18616CD300BAE6A5 /* mtTableView.m */; };
 		8BF6A5361861943E00BAE6A5 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF6A5351861943E00BAE6A5 /* Application.xib */; };
 		8BFB843E186D5D9E004C9AF0 /* NSURLConnectionExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB843D186D5D9E004C9AF0 /* NSURLConnectionExercise.m */; };
@@ -67,6 +68,7 @@
 		8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllanXmlParse.m; sourceTree = "<group>"; };
 		8B943FA01895EF500010BA5B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		8B943FA11895EF500010BA5B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
 		8BF6A0DC18616CD300BAE6A5 /* mtTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtTableView.h; sourceTree = "<group>"; };
 		8BF6A0DD18616CD300BAE6A5 /* mtTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtTableView.m; sourceTree = "<group>"; };
 		8BF6A5351861943E00BAE6A5 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */,
 				8B1DE7DD185A9DED009DEEC6 /* CoreGraphics.framework in Frameworks */,
 				8B1DE7DF185A9DED009DEEC6 /* UIKit.framework in Frameworks */,
 				8B1DE7DB185A9DED009DEEC6 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		8B1DE7CE185A9DED009DEEC6 = {
 			isa = PBXGroup;
 			children = (
+				8B943FAB1896295D0010BA5B /* Controlers */,
 				8B988F71188FC696000DF2D0 /* Utility */,
 				8B9396A118861F75002C1583 /* Models */,
 				8B1DE7E0185A9DED009DEEC6 /* IOSExercise_allanxing */,
@@ -122,6 +126,7 @@
 		8B1DE7D9185A9DED009DEEC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B943FA918960A9D0010BA5B /* libxml2.dylib */,
 				8B1DE7DA185A9DED009DEEC6 /* Foundation.framework */,
 				8B1DE7DC185A9DED009DEEC6 /* CoreGraphics.framework */,
 				8B1DE7DE185A9DED009DEEC6 /* UIKit.framework */,
@@ -198,6 +203,13 @@
 				8B943FA11895EF500010BA5B /* GDataXMLNode.m */,
 			);
 			path = GDataXML;
+			sourceTree = "<group>";
+		};
+		8B943FAB1896295D0010BA5B /* Controlers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controlers;
 			sourceTree = "<group>";
 		};
 		8B988F71188FC696000DF2D0 /* Utility */ = {
@@ -441,10 +453,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lxml2",
-				);
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = MSBLogs_AllanXing;
 				SDKROOT = iphoneos6.0;
 				VALID_ARCHS = "armv7 armv7s";
@@ -466,10 +475,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lxml2",
-				);
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = MSBLogs_AllanXing;
 				SDKROOT = iphoneos6.0;
 				VALID_ARCHS = "armv7 armv7s";

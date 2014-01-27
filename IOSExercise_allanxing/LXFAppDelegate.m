@@ -10,7 +10,8 @@
 #import "mtTableView.h"
 #import "NSURLConnectionExercise.h"
 #import "AllanXmlParse.h"
-//#import "GDataXMLNode.h"
+#import "GDataXMLNode.h"
+#import "Channel.h"
 
 @implementation LXFAppDelegate
 
@@ -38,7 +39,8 @@ UIView *myView;
 
 -(void) HttpStringCallBack:(NSString *)string{
     NSError *error;
-//    GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
+    GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
+ NSArray *array=[[doc rootElement] elementsForName:[Channel TitleElementName]];
 //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
 }
 

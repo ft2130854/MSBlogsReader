@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item 1-->
+        <!--Blog Table View Controller - Item 1-->
         <scene sceneID="8EW-1Q-9Im">
             <objects>
-                <viewController id="oHI-r6-yyR" sceneMemberID="viewController">
+                <viewController id="oHI-r6-yyR" customClass="BlogTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q2K-Si-Xka"/>
                         <viewControllerLayoutGuide type="bottom" id="UEQ-FR-QJe"/>

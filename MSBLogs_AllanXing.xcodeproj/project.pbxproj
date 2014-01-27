@@ -104,7 +104,8 @@
 		8B1DE7CE185A9DED009DEEC6 = {
 			isa = PBXGroup;
 			children = (
-				8B943FAB1896295D0010BA5B /* Controlers */,
+				8B943FF1189636840010BA5B /* Views */,
+				8B943FAB1896295D0010BA5B /* Controllers */,
 				8B988F71188FC696000DF2D0 /* Utility */,
 				8B9396A118861F75002C1583 /* Models */,
 				8B1DE7E0185A9DED009DEEC6 /* IOSExercise_allanxing */,
@@ -205,11 +206,18 @@
 			path = GDataXML;
 			sourceTree = "<group>";
 		};
-		8B943FAB1896295D0010BA5B /* Controlers */ = {
+		8B943FAB1896295D0010BA5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Controlers;
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8B943FF1189636840010BA5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		8B988F71188FC696000DF2D0 /* Utility */ = {

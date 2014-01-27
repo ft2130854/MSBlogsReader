@@ -25,6 +25,7 @@
 		8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
 		8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B943FA918960A9D0010BA5B /* libxml2.dylib */; };
+		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
 		8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6A0DD18616CD300BAE6A5 /* mtTableView.m */; };
 		8BF6A5361861943E00BAE6A5 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF6A5351861943E00BAE6A5 /* Application.xib */; };
 		8BFB843E186D5D9E004C9AF0 /* NSURLConnectionExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB843D186D5D9E004C9AF0 /* NSURLConnectionExercise.m */; };
@@ -69,6 +70,7 @@
 		8B943FA01895EF500010BA5B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		8B943FA11895EF500010BA5B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
+		8B943FF218963D1C0010BA5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		8BF6A0DC18616CD300BAE6A5 /* mtTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtTableView.h; sourceTree = "<group>"; };
 		8BF6A0DD18616CD300BAE6A5 /* mtTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtTableView.m; sourceTree = "<group>"; };
 		8BF6A5351861943E00BAE6A5 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		8B943FF1189636840010BA5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8B943FF218963D1C0010BA5B /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1DE7E5185A9DED009DEEC6 /* InfoPlist.strings in Resources */,
+				8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */,
 				8B1DE7ED185A9DED009DEEC6 /* Images.xcassets in Resources */,
 				8BF6A5361861943E00BAE6A5 /* Application.xib in Resources */,
 			);

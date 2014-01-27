@@ -26,6 +26,8 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>Application</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

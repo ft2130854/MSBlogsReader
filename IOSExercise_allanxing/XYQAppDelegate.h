@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LXFAppDelegate : UIResponder <UIApplicationDelegate>{
+@interface XYQAppDelegate : UIResponder <UIApplicationDelegate>{
 
     
 }

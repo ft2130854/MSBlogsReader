@@ -10,7 +10,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <customObject id="4" userLabel="App Delegate" customClass="LXFAppDelegate">
+        <customObject id="4" userLabel="App Delegate" customClass="XYQAppDelegate">
             <connections>
                 <outlet property="window" destination="2" id="Ibh-lP-RYb"/>
             </connections>

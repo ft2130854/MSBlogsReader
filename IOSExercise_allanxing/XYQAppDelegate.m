@@ -6,14 +6,14 @@
 //  Copyright (c) 2013年 allan. All rights reserved.
 //
 
-#import "LXFAppDelegate.h"
+#import "XYQAppDelegate.h"
 #import "mtTableView.h"
 #import "NSURLConnectionExercise.h"
 #import "AllanXmlParse.h"
 #import "GDataXMLNode.h"
 #import "Channel.h"
 
-@implementation LXFAppDelegate
+@implementation XYQAppDelegate
 
 @synthesize myViewController;
 
@@ -25,7 +25,7 @@ UIView *myView;
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-       [self.window makeKeyAndVisible];
+//       [self.window makeKeyAndVisible];
     return YES;
 }
 

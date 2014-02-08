@@ -13,9 +13,14 @@
 #import "GDataXMLNode.h"
 #import "Channel.h"
 
+@interface XYQAppDelegate ()<UITabBarControllerDelegate,UINavigationBarDelegate>
+
+
+@end
+
 @implementation XYQAppDelegate
 
-@synthesize myViewController;
+@synthesize MainTabViewController;
 
 
 UIView *myView;

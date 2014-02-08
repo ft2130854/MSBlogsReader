@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 
-@property(strong,nonatomic) UIViewController *myViewController;
+@property(strong,nonatomic) IBOutlet UITabBarController *MainTabViewController;
 
 -(IBAction)buttionClick:(id)ovject;
 

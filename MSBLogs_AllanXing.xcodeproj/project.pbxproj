@@ -23,6 +23,7 @@
 		8B1DE7FE185A9DED009DEEC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1DE7FC185A9DED009DEEC6 /* InfoPlist.strings */; };
 		8B1DE800185A9DED009DEEC6 /* IOSExercise_allanxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DE7FF185A9DED009DEEC6 /* IOSExercise_allanxingTests.m */; };
 		8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */; };
+		8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F218A5FED1005A7898 /* AboutViewController.m */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
 		8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B943FA918960A9D0010BA5B /* libxml2.dylib */; };
 		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
@@ -68,6 +69,8 @@
 		8B23ABEA1884DEDC0090EFAE /* AllanNetWorkProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllanNetWorkProtocol.h; path = IOSExercise_allanxing/AllanNetWorkProtocol.h; sourceTree = "<group>"; };
 		8B23ABEB1885331E0090EFAE /* AllanXmlParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllanXmlParse.h; sourceTree = "<group>"; };
 		8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllanXmlParse.m; sourceTree = "<group>"; };
+		8B2CC4F118A5FED1005A7898 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		8B2CC4F218A5FED1005A7898 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8B943FA01895EF500010BA5B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		8B943FA11895EF500010BA5B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
@@ -213,6 +216,8 @@
 			children = (
 				8B943FF4189645CA0010BA5B /* BlogTableViewController.h */,
 				8B943FF5189645CA0010BA5B /* BlogTableViewController.m */,
+				8B2CC4F118A5FED1005A7898 /* AboutViewController.h */,
+				8B2CC4F218A5FED1005A7898 /* AboutViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */,
 				8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */,
 				8B1C2F91188D18A000F4E0AA /* TestFile.m in Sources */,
+				8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */,
 				8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */,
 				8B1DE7EB185A9DED009DEEC6 /* XYQAppDelegate.m in Sources */,
 			);

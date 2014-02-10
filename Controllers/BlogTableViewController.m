@@ -7,6 +7,7 @@
 //
 
 #import "BlogTableViewController.h"
+#import "NSURLConnectionExercise.h"
 
 @interface BlogTableViewController ()
 
@@ -26,6 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
+    [ex StartConnection];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

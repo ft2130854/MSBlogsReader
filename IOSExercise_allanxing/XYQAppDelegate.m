@@ -36,10 +36,7 @@ UIView *myView;
 
 -(IBAction)buttionClick:(id)ovject{
     
-    NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
-       [ex StartConnection];
-    
-    
+       
 }
 
 -(void) HttpStringCallBack:(NSString *)string{

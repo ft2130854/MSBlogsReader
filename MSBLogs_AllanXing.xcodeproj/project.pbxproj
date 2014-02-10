@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1A59EA18A85EF700FF41E2 /* BlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A59E918A85EF700FF41E2 /* BlogViewController.m */; };
 		8B1C2F8E188D0A8B00F4E0AA /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C2F8D188D0A8B00F4E0AA /* Channel.m */; };
 		8B1C2F91188D18A000F4E0AA /* TestFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C2F90188D18A000F4E0AA /* TestFile.m */; };
 		8B1C2F94188D1FCC00F4E0AA /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C2F93188D1FCC00F4E0AA /* Item.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B1A59E818A85EF700FF41E2 /* BlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogViewController.h; path = Controllers/BlogViewController.h; sourceTree = "<group>"; };
+		8B1A59E918A85EF700FF41E2 /* BlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogViewController.m; path = Controllers/BlogViewController.m; sourceTree = "<group>"; };
 		8B1C2F8C188D0A8B00F4E0AA /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
 		8B1C2F8D188D0A8B00F4E0AA /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		8B1C2F8F188D18A000F4E0AA /* TestFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFile.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				8B943FF5189645CA0010BA5B /* BlogTableViewController.m */,
 				8B2CC4F118A5FED1005A7898 /* AboutViewController.h */,
 				8B2CC4F218A5FED1005A7898 /* AboutViewController.m */,
+				8B1A59E818A85EF700FF41E2 /* BlogViewController.h */,
+				8B1A59E918A85EF700FF41E2 /* BlogViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			files = (
 				8B1C2F94188D1FCC00F4E0AA /* Item.m in Sources */,
 				8BFB843E186D5D9E004C9AF0 /* NSURLConnectionExercise.m in Sources */,
+				8B1A59EA18A85EF700FF41E2 /* BlogViewController.m in Sources */,
 				8B1C2F8E188D0A8B00F4E0AA /* Channel.m in Sources */,
 				8B1DE7E7185A9DED009DEEC6 /* main.m in Sources */,
 				8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */,

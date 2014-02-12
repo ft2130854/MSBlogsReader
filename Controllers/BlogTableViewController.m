@@ -8,6 +8,8 @@
 
 #import "BlogTableViewController.h"
 #import "NSURLConnectionExercise.h"
+#import "GDataXMLNode.h"
+#import "Channel.h"
 
 @interface BlogTableViewController ()
 
@@ -69,6 +71,15 @@
     // Configure the cell...
     
     return cell;
+}
+
+#pragma mark - NSURLConnection delegate
+
+-(void) HttpStringCallBack:(NSString *)string{
+    NSError *error;
+    GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
+    NSArray *array=[[doc rootElement] elementsForName:[Channel TitleElementName]];
+    //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
 }
 
 /*

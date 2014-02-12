@@ -83,6 +83,7 @@
 }
 
 -(void)StartConnection{
+    
     NSURLConnection * connection=  [[NSURLConnection alloc] initWithRequest:[self CreateRequest] delegate:self];
     if (!connection) {//the connection failed;
         reciveData=nil;

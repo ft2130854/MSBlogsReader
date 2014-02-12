@@ -39,12 +39,7 @@ UIView *myView;
        
 }
 
--(void) HttpStringCallBack:(NSString *)string{
-    NSError *error;
-    GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
- NSArray *array=[[doc rootElement] elementsForName:[Channel TitleElementName]];
-//    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
-}
+
 
 -(IBAction)OutsideAction:(id)sender{
 //     NSURLConnectionExercise *ex=[NSURLConnectionExercise new];

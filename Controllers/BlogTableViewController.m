@@ -17,6 +17,7 @@
 
 @implementation BlogTableViewController
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -31,9 +32,14 @@
     [super viewDidLoad];
 
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
-    [ex StartConnection];
+    //    [ex StartConnection];
     
-
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"testFeed"
+                                                     ofType:@"xml"];
+    [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
+    
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -78,7 +84,7 @@
 -(void) HttpStringCallBack:(NSString *)string{
     NSError *error;
     GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
-    NSArray *array=[[doc rootElement] elementsForName:[Channel TitleElementName]];
+    NSArray *array=[[doc rootElement] elementsForName:[Channel Name]];
     //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
 }
 

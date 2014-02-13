@@ -28,6 +28,8 @@
 		8B2CC4F918A6262F005A7898 /* book_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F818A6262F005A7898 /* book_24.png */; };
 		8B2CC4FB18A62769005A7898 /* info_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4FA18A62769005A7898 /* info_24.png */; };
 		8B3623F618AB442200346320 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3623F518AB442200346320 /* UIView+NibLoading.m */; };
+		8B3623F818AB556B00346320 /* testFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B3623F718AB556B00346320 /* testFeed.xml */; };
+		8B3623FB18AB5E3700346320 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3623FA18AB5E3700346320 /* Constant.m */; };
 		8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */; };
 		8B6001BD18AA16D400ACB4C4 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
@@ -83,6 +85,9 @@
 		8B2CC4FA18A62769005A7898 /* info_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_24.png; sourceTree = "<group>"; };
 		8B3623F418AB442200346320 /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+NibLoading.h"; path = "../../../Downloads/YMCalendarSheet-master/YMCalendarSheet/UIView+NibLoading.h"; sourceTree = "<group>"; };
 		8B3623F518AB442200346320 /* UIView+NibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+NibLoading.m"; path = "../../../Downloads/YMCalendarSheet-master/YMCalendarSheet/UIView+NibLoading.m"; sourceTree = "<group>"; };
+		8B3623F718AB556B00346320 /* testFeed.xml */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; lineEnding = 0; path = testFeed.xml; sourceTree = "<group>"; };
+		8B3623F918AB5E3700346320 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		8B3623FA18AB5E3700346320 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		8B6001B918AA16D400ACB4C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Views/DetailViewController.h; sourceTree = "<group>"; };
 		8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Views/DetailViewController.m; sourceTree = "<group>"; };
 		8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = Views/DetailViewController.xib; sourceTree = "<group>"; };
@@ -134,7 +139,7 @@
 				8B943FAB1896295D0010BA5B /* Controllers */,
 				8B988F71188FC696000DF2D0 /* Utility */,
 				8B9396A118861F75002C1583 /* Models */,
-				8B1DE7E0185A9DED009DEEC6 /* IOSExercise_allanxing */,
+				8B1DE7E0185A9DED009DEEC6 /* IOSBlogs_allanxing */,
 				8B1DE7F9185A9DED009DEEC6 /* IOSExercise_allanxingTests */,
 				8B1DE7D9185A9DED009DEEC6 /* Frameworks */,
 				8B1DE7D8185A9DED009DEEC6 /* Products */,
@@ -162,7 +167,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8B1DE7E0185A9DED009DEEC6 /* IOSExercise_allanxing */ = {
+		8B1DE7E0185A9DED009DEEC6 /* IOSBlogs_allanxing */ = {
 			isa = PBXGroup;
 			children = (
 				8B1DE7E9185A9DED009DEEC6 /* XYQAppDelegate.h */,
@@ -175,7 +180,10 @@
 				8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */,
 				8B1C2F8F188D18A000F4E0AA /* TestFile.h */,
 				8B1C2F90188D18A000F4E0AA /* TestFile.m */,
+				8B3623F918AB5E3700346320 /* Constant.h */,
+				8B3623FA18AB5E3700346320 /* Constant.m */,
 			);
+			name = IOSBlogs_allanxing;
 			path = IOSExercise_allanxing;
 			sourceTree = "<group>";
 		};
@@ -211,6 +219,7 @@
 		8B2CC4F618A6229E005A7898 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8B3623F718AB556B00346320 /* testFeed.xml */,
 				8B2CC4F718A62537005A7898 /* Images */,
 			);
 			name = Resources;
@@ -386,6 +395,7 @@
 				8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */,
 				8B6001BD18AA16D400ACB4C4 /* DetailViewController.xib in Resources */,
 				8B2CC4F918A6262F005A7898 /* book_24.png in Resources */,
+				8B3623F818AB556B00346320 /* testFeed.xml in Resources */,
 				8B1DE7ED185A9DED009DEEC6 /* Images.xcassets in Resources */,
 				8BF6A5361861943E00BAE6A5 /* Application.xib in Resources */,
 				8B2CC4FB18A62769005A7898 /* info_24.png in Resources */,
@@ -420,6 +430,7 @@
 				8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */,
 				8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */,
 				8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */,
+				8B3623FB18AB5E3700346320 /* Constant.m in Sources */,
 				8B1DE7EB185A9DED009DEEC6 /* XYQAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOSExercise_allanxing/MSBLogs_AllanXing-Prefix.pch";
@@ -561,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOSExercise_allanxing/MSBLogs_AllanXing-Prefix.pch";

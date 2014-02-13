@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Channel.h"
 
 @interface BlogTableViewController : UITableViewController{
-
+@public IBOutlet Channel *_channel;
 }
 
 @end

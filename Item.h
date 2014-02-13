@@ -10,21 +10,21 @@
 
 @interface Item : NSObject
 
-@property (nonatomic,readonly)NSString *Title;
-@property (nonatomic,readonly)NSString *Description;
-@property (nonatomic,readonly)NSString *PubDate;
-@property (nonatomic,readonly)NSString *Guid;
-@property (nonatomic,readonly)NSString *Link;
-@property (nonatomic,readonly)NSString *Author;
-@property (nonatomic,readonly)NSString *Comments;
-@property (nonatomic,readonly)NSMutableArray *Category;
-@property (nonatomic,readonly)NSString *ChannelId_sxp;
-@property (nonatomic,readonly)NSString *FeedId_sxp;
-@property (nonatomic,readonly)NSString *PublishId_sxp;
-@property (nonatomic,readonly)NSString *AssetId_sxp;
-@property (nonatomic,readonly)NSString *Author_sxp;
-@property (nonatomic,readonly)NSString *Comments_sxp;
-@property (nonatomic,readonly)NSString *ContentType_sxp;
+@property (nonatomic)NSString *Title;
+@property (nonatomic)NSString *Description;
+@property (nonatomic)NSString *PubDate;
+@property (nonatomic)NSString *Guid;
+@property (nonatomic)NSString *Link;
+@property (nonatomic)NSString *Author;
+@property (nonatomic)NSString *Comments;
+@property (nonatomic)NSMutableArray *Category;
+@property (nonatomic)NSString *ChannelId_sxp;
+@property (nonatomic)NSString *FeedId_sxp;
+@property (nonatomic)NSString *PublishId_sxp;
+@property (nonatomic)NSString *AssetId_sxp;
+@property (nonatomic)NSString *Author_sxp;
+@property (nonatomic)NSString *Comments_sxp;
+@property (nonatomic)NSString *ContentType_sxp;
 
 
 

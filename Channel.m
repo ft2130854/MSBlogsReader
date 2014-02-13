@@ -7,6 +7,8 @@
 //
 
 #import "Channel.h"
+#import "GDataXMLNode.h"
+#import "Item.h"
 
 @implementation Channel
 
@@ -45,5 +47,18 @@ return @"title";
     return @"item";
 }
 
-
+-(void) setItems:(NSMutableArray *)Items{
+    if (Items.count) {
+        NSMutableArray * tempItems=[NSMutableArray new];
+        if ([[Items firstObject]isKindOfClass:[GDataXMLElement class]]) {
+            for (GDataXMLElement *element in Items) {
+                Item *item=[Item new];
+                item.Title=[[element elementsForName:[Item TitleElementName]][0]stringValue];
+                item.Description=[[element elementsForName:[Item DescriptionElementName]][0]stringValue];
+                [tempItems addObject:item];
+            }
+            _Items=tempItems;
+        }
+    }
+}
 @end

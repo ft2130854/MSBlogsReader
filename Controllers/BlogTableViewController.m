@@ -30,12 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _channel=[Channel new];
 
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
-    //    [ex StartConnection];
+
+//    [ex StartConnection];
     
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"testFeed"
-                                                     ofType:@"xml"];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"testFeed" ofType:@"xml"];
     [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
     
     
@@ -71,7 +74,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+       static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
@@ -85,6 +88,15 @@
     NSError *error;
     GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
     NSArray *array=[[doc rootElement] elementsForName:[Channel Name]];
+    GDataXMLElement * element= (GDataXMLElement *) array[0];
+    
+    _channel.Title = [[element elementsForName:[Channel TitleElementName]][0] stringValue];
+    _channel.description=[[element elementsForName:[Channel DescriptionElementName]][0] stringValue];
+    _channel.CopyRight=[[element elementsForName:[Channel CopyRightElementName]][0] stringValue];
+    _channel.Link=[[element elementsForName:[Channel LinkElementName]][0] stringValue];
+    _channel.Generator=[[element elementsForName:[Channel GeneratorElementName]][0]stringValue];
+    _channel.Items=[[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
+    
     //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
 }
 

@@ -41,7 +41,7 @@
 @property (nonatomic) NSString *ItemsElementName;
 +(NSString *)ItemsElementName;
 
-@property (nonatomic) NSMutableArray *Items;
+@property (nonatomic,setter = setItems:) NSMutableArray *Items;
 
 
 @end

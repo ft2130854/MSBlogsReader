@@ -18,7 +18,7 @@
 }
 
 @property NSURL* Url;
-@property NSURLConnection* connection;
+@property NSURLConnection* Connection;
 @property (retain) id<AllanNetWorkProtocol> delegate;
 
 -(id)initWithUrl:(NSURL *) url delegate:(id<AllanNetWorkProtocol>) delegate;

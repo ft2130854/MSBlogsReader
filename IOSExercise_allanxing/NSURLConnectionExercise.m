@@ -36,7 +36,7 @@
     }
     return self;
 }
-@synthesize connection;
+@synthesize Connection=_connection;
  static   NSURLRequest *request;
 -(NSURLRequest *)CreateRequest{
     if (_Url) {

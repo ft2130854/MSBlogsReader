@@ -14,6 +14,8 @@
 
 @implementation DetailViewController
 
+@synthesize ArticleItem;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,6 +28,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (webView) {
+        if (ArticleItem) {
+            self.title=ArticleItem.Title;
+            [webView loadHTMLString:ArticleItem.Description baseURL:NULL];
+        }
+    }
     // Do any additional setup after loading the view from its nib.
 }
 

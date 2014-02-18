@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Item.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController{
+ IBOutlet UIWebView * webView;
+}
 
+@property (nonatomic,weak) Item *ArticleItem;
 @end

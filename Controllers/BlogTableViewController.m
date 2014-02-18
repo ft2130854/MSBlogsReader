@@ -10,6 +10,7 @@
 #import "NSURLConnectionExercise.h"
 #import "GDataXMLNode.h"
 #import "Channel.h"
+#import "DetailViewController.h"
 
 @interface BlogTableViewController ()
 
@@ -56,10 +57,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)tableViewItemSelector:(id)sender{
+    
+}
+#pragma mark- tableView delegate
+
+
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:Nil];
+    DetailViewController *controller=  [sb instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    _index=indexPath.item;
+    return indexPath;
+}
+
 #pragma mark - Table view data source
 
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"pushToDetail"]) {
+        id detailController=segue.destinationViewController;
+        [detailController setValue:_channel.Items[_index] forKey:@"ArticleItem"];
+    }
+}
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 //{

@@ -50,7 +50,7 @@
     return request;
     
 }
-#pragma mark - protocol
+#pragma mark - URLConnectionDelegate
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     [reciveData setLength:0];
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
@@ -58,6 +58,7 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     connection=nil;
     reciveData=nil;
     //and inform user
@@ -78,12 +79,14 @@
         [self.delegate HttpStringCallBack:string];
     }
 
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     connection=nil;
     reciveData=nil;
 }
 
 -(void)StartConnection{
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURLConnection * connection=  [[NSURLConnection alloc] initWithRequest:[self CreateRequest] delegate:self];
     if (!connection) {//the connection failed;
         reciveData=nil;

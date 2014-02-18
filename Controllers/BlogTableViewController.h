@@ -10,7 +10,8 @@
 #import "Channel.h"
 
 @interface BlogTableViewController : UITableViewController{
-@public IBOutlet Channel *_channel;
+@public Channel *_channel;
+@private NSInteger _index;
 }
-
+-(IBAction)tableViewItemSelector:(id)sender;
 @end

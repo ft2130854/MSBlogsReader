@@ -22,7 +22,7 @@
     return [NSData new];
 }
 
--(void)storeData:(NSData *)storeData (NSString *)pathString{
+-(void)storeData:(NSData *)storeData forURL: (NSString *)pathString{
     
 }
 

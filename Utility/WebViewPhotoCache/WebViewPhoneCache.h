@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebViewPhoneCache : NSURLCache
+@interface WebViewPhoneCache : NSURLCache{
+    NSUserDefaults *localStroe;
+}
 +(WebViewPhoneCache *)sharedCache;
 -(Boolean)hasDataForURL:(NSString *)pathString;
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString;

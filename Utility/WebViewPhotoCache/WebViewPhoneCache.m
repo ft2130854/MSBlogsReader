@@ -10,20 +10,32 @@
 
 @implementation WebViewPhoneCache
 
+
 +(WebViewPhoneCache *)sharedCache{
     return [WebViewPhoneCache new];
 }
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        localStroe=[NSUserDefaults standardUserDefaults];
+    }
+    return self;
+}
+
 
 -(Boolean)hasDataForURL:(NSString *)pathString{
+    [localStroe boolForKey:pathString];
     return YES;
 }
 
 -(NSData *)dataForURL:(NSString *)pathString{
-    return [NSData new];
+    NSData *data=(NSData *) [localStroe objectForKey:pathString];
+    return data;
 }
 
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString{
-    
+     [localStroe setObject:storeData forKey:pathString];
 }
 
 -(NSCachedURLResponse *)cachedResponseForRequest:(NSURLRequest *)request{

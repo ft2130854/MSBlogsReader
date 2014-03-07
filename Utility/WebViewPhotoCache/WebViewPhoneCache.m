@@ -14,18 +14,32 @@
 +(WebViewPhoneCache *)sharedCache{
     return [WebViewPhoneCache new];
 }
+
++(void)ClearCache{
+    NSUserDefaults *localStroe=[NSUserDefaults standardUserDefaults];
+    
+}
+
 - (id)init
 {
     self = [super init];
     if (self) {
-        localStroe=[NSUserDefaults standardUserDefaults];
+        _localStroe=[NSUserDefaults standardUserDefaults];
+        NSDictionary *temp=     [_localStroe dictionaryForKey:cDictionary];
+        _cacheDictionary=[[NSMutableDictionary alloc] initWithDictionary:temp];
+        if (_cacheDictionary) {
+            _cacheDictionary=[NSMutableDictionary new];
+        }
     }
     return self;
 }
 
+(void)setCacheDictionary:(NSMutableDictionary *)newValue{
+    
+}
 
 -(Boolean)hasDataForURL:(NSString *)pathString{
-  NSObject  *image=   [localStroe objectForKey:pathString];
+  NSObject  *image=   [_localStroe objectForKey:pathString];
     if (image) {
         return YES;
     }
@@ -33,12 +47,12 @@
 }
 
 -(NSData *)dataForURL:(NSString *)pathString{
-    NSData *data=(NSData *) [localStroe objectForKey:pathString];
+    NSData *data=(NSData *) [_localStroe objectForKey:pathString];
     return data;
 }
 
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString{
-    [localStroe setObject:storeData forKey:pathString];
+    [_localStroe setObject:storeData forKey:pathString];
 }
 
 -(NSCachedURLResponse *)cachedResponseForRequest:(NSURLRequest *)request{
@@ -75,4 +89,12 @@
     }
     
 }
+- (NSMutableDictionary *)cacheDictionary {
+    return _cacheDictionary;
+}
+
+- (void)setCacheDictionary:(NSMutableDictionary *)newValue {
+    _cacheDictionary = newValue;
+}
+
 @end

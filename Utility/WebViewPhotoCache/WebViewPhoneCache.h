@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#define cDictionary @"CacheDictionary";
 @interface WebViewPhoneCache : NSURLCache{
-    NSUserDefaults *localStroe;
+    NSUserDefaults *_localStroe;
+    NSMutableDictionary *_cacheDictionary;
 }
+
+
 +(WebViewPhoneCache *)sharedCache;
 -(Boolean)hasDataForURL:(NSString *)pathString;
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString;
+
+- (void)setCacheDictionary:(NSMutableDictionary *)newValue;
+
 @end

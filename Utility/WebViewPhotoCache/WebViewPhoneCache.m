@@ -25,8 +25,11 @@
 
 
 -(Boolean)hasDataForURL:(NSString *)pathString{
-    [localStroe boolForKey:pathString];
-    return YES;
+  NSObject  *image=   [localStroe objectForKey:pathString];
+    if (image) {
+        return YES;
+    }
+    return NO;
 }
 
 -(NSData *)dataForURL:(NSString *)pathString{
@@ -35,36 +38,41 @@
 }
 
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString{
-     [localStroe setObject:storeData forKey:pathString];
+    [localStroe setObject:storeData forKey:pathString];
 }
 
 -(NSCachedURLResponse *)cachedResponseForRequest:(NSURLRequest *)request{
     
     NSString *pathString = [[request URL] absoluteString];
     
-    if(![pathString hasSuffix:@".jpg"]) {
-        return[super cachedResponseForRequest:request];
+    if([pathString hasSuffix:@".jpg"]||[pathString hasSuffix:@".png"]){
+        NSString *suffix=[pathString pathExtension];
+        NSString *mimeType=  [NSString stringWithFormat:@"image/%@",suffix];
+        if([[WebViewPhoneCache sharedCache] hasDataForURL:pathString]) {
+            NSData *data = [[WebViewPhoneCache sharedCache] dataForURL:pathString];
+            NSURLResponse *response = [[NSURLResponse alloc] initWithURL:[request URL]
+                                                                MIMEType:mimeType
+                                                   expectedContentLength:[data length]
+                                                        textEncodingName:nil];
+            return [[NSCachedURLResponse alloc] initWithResponse:response data:data];
+        }
+        
     }
-    
-    if([[WebViewPhoneCache sharedCache] hasDataForURL:pathString]) {
-        NSData *data = [[WebViewPhoneCache sharedCache] dataForURL:pathString];
-        NSURLResponse *response = [[NSURLResponse alloc] initWithURL:[request URL]
-                                                             MIMEType:@"image/jpg"
-                                                expectedContentLength:[data length]
-                                                     textEncodingName:nil];
-        return [[NSCachedURLResponse alloc] initWithResponse:response data:data];
+    else{
+        return[super cachedResponseForRequest:request];
     }
     return[super cachedResponseForRequest:request];
 }
 
 -(void)storeCachedResponse:(NSCachedURLResponse *)cachedResponse forRequest:(NSURLRequest *)request{
     NSString *pathString = [[request URL] absoluteString];
-    if(![pathString hasSuffix:@".jpg"]) {
+    if([pathString hasSuffix:@".jpg"]||[pathString hasSuffix:@".png"]) {
+        [[WebViewPhoneCache sharedCache] storeData:cachedResponse.data forURL:pathString];
+    }
+    else{
         [super storeCachedResponse:cachedResponse forRequest:request];
         return;
     }
     
-    [[WebViewPhoneCache sharedCache] storeData:cachedResponse.data forURL:pathString];
-
 }
 @end

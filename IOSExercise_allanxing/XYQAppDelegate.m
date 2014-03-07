@@ -12,6 +12,7 @@
 #import "AllanXmlParse.h"
 #import "GDataXMLNode.h"
 #import "Channel.h"
+#import "WebViewPhoneCache.h"
 
 @interface XYQAppDelegate ()<UITabBarControllerDelegate,UINavigationBarDelegate>
 
@@ -27,6 +28,10 @@ UIView *myView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSURLCache *URLCache = [[WebViewPhoneCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
+                                                         diskCapacity:20 * 1024 * 1024
+                                                             diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     

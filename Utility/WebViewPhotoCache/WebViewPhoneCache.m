@@ -34,7 +34,7 @@
     return self;
 }
 
-(void)setCacheDictionary:(NSMutableDictionary *)newValue{
+-(void)setCacheDictionary:(NSMutableDictionary *)newValue{
     
 }
 

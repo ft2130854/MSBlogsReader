@@ -34,10 +34,6 @@
     return self;
 }
 
--(void)setCacheDictionary:(NSMutableDictionary *)newValue{
-    
-}
-
 -(Boolean)hasDataForURL:(NSString *)pathString{
   NSObject  *image=   [_localStroe objectForKey:pathString];
     if (image) {

@@ -11,6 +11,8 @@
 #import "GDataXMLNode.h"
 #import "Channel.h"
 #import "DetailViewController.h"
+#import "WebViewPhoneCache.h"
+#import "MBProgressHUD.h"
 
 @interface BlogTableViewController ()
 
@@ -34,11 +36,14 @@
     
     _channel=[Channel new];
 
+   hud=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
+    hud.labelText=@"Loading...";
+    //true  feed
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
 
 //    [ex StartConnection];
     
-    
+    //local test feed
     NSString* path = [[NSBundle mainBundle] pathForResource:@"testFeed" ofType:@"xml"];
     [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
     
@@ -59,6 +64,10 @@
 
 -(IBAction)tableViewItemSelector:(id)sender{
     
+}
+
+-(IBAction)ClearCacheAction:(id)sender{
+    [WebViewPhoneCache ClearCache];
 }
 #pragma mark- tableView delegate
 
@@ -121,6 +130,8 @@
     _channel.Items=[[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
     
     //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
+    [hud hide:YES];
+    
 }
 
 /*

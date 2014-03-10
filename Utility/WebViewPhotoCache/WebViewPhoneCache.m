@@ -7,18 +7,19 @@
 //
 
 #import "WebViewPhoneCache.h"
+static WebViewPhoneCache *instance;
 
 @implementation WebViewPhoneCache
 
 
 +(WebViewPhoneCache *)sharedCache{
-    return [WebViewPhoneCache new];
+    if (!instance) {
+        instance= [WebViewPhoneCache new];
+    }
+     return instance;
 }
 
-+(void)ClearCache{
-    NSUserDefaults *localStroe=[NSUserDefaults standardUserDefaults];
-    
-}
+
 
 - (id)init
 {
@@ -27,13 +28,28 @@
         _localStroe=[NSUserDefaults standardUserDefaults];
         NSDictionary *temp=     [_localStroe dictionaryForKey:cDictionary];
         _cacheDictionary=[[NSMutableDictionary alloc] initWithDictionary:temp];
-        if (_cacheDictionary) {
+        if (!_cacheDictionary) {
             _cacheDictionary=[NSMutableDictionary new];
         }
     }
     return self;
 }
 
+- (void)setCacheDictionary:(NSMutableDictionary *)newValue {
+    _cacheDictionary = newValue;
+    [_localStroe setObject:_cacheDictionary forKey:cDictionary];
+}
+
++(void)ClearCache{
+    NSUserDefaults *localStroe=[NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *dic= [[NSMutableDictionary alloc] initWithDictionary:[localStroe dictionaryForKey:cDictionary]];
+    for (NSInteger i=0; i<dic.count; i++) {
+      NSString * url=  dic.allValues[i];
+        [localStroe removeObjectForKey:url];
+    }
+    [localStroe removeObjectForKey:cDictionary];
+    
+}
 -(Boolean)hasDataForURL:(NSString *)pathString{
   NSObject  *image=   [_localStroe objectForKey:pathString];
     if (image) {
@@ -49,6 +65,11 @@
 
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString{
     [_localStroe setObject:storeData forKey:pathString];
+    NSDateFormatter *formatter=[NSDateFormatter new];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [_cacheDictionary setValue:pathString forKey:[formatter stringFromDate:[NSDate date]]];
+    self.CacheDictionary=  _cacheDictionary;
 }
 
 -(NSCachedURLResponse *)cachedResponseForRequest:(NSURLRequest *)request{
@@ -89,8 +110,6 @@
     return _cacheDictionary;
 }
 
-- (void)setCacheDictionary:(NSMutableDictionary *)newValue {
-    _cacheDictionary = newValue;
-}
+
 
 @end

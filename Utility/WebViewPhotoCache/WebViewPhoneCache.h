@@ -11,10 +11,12 @@
 @interface WebViewPhoneCache : NSURLCache{
     NSUserDefaults *_localStroe;
     NSMutableDictionary *_cacheDictionary;
+    WebViewPhoneCache *instance;
 }
-
+@property(nonatomic,setter = setCacheDictionary:) NSMutableDictionary *CacheDictionary;
 
 +(WebViewPhoneCache *)sharedCache;
++(void)ClearCache;
 -(Boolean)hasDataForURL:(NSString *)pathString;
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString;
 

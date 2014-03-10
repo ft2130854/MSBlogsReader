@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Channel.h"
+#import "MBProgressHUD.h"
 
 @interface BlogTableViewController : UITableViewController{
 @public Channel *_channel;
 @private NSInteger _index;
+MBProgressHUD *hud;
 }
 -(IBAction)tableViewItemSelector:(id)sender;
+-(IBAction)ClearCacheAction:(id)sender;
 @end

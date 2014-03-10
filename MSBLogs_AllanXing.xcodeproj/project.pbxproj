@@ -35,6 +35,7 @@
 		8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B943FA918960A9D0010BA5B /* libxml2.dylib */; };
 		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
 		8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FF5189645CA0010BA5B /* BlogTableViewController.m */; };
+		8BAC2C9318CDAD52003AA342 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC2C9218CDAD52003AA342 /* MBProgressHUD.m */; };
 		8BDC0A7918B359B800E81A21 /* WebViewPhoneCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC0A7818B359B800E81A21 /* WebViewPhoneCache.m */; };
 		8BE6D51E18AE0456008EC2B7 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE6D51D18AE0456008EC2B7 /* UIView+NibLoading.m */; };
 		8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6A0DD18616CD300BAE6A5 /* mtTableView.m */; };
@@ -96,6 +97,8 @@
 		8B943FF218963D1C0010BA5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		8B943FF4189645CA0010BA5B /* BlogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogTableViewController.h; path = Controllers/BlogTableViewController.h; sourceTree = "<group>"; };
 		8B943FF5189645CA0010BA5B /* BlogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogTableViewController.m; path = Controllers/BlogTableViewController.m; sourceTree = "<group>"; };
+		8BAC2C9118CDAD52003AA342 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8BAC2C9218CDAD52003AA342 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8BDC0A7718B359B800E81A21 /* WebViewPhoneCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewPhoneCache.h; path = Utility/WebViewPhotoCache/WebViewPhoneCache.h; sourceTree = "<group>"; };
 		8BDC0A7818B359B800E81A21 /* WebViewPhoneCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewPhoneCache.m; path = Utility/WebViewPhotoCache/WebViewPhoneCache.m; sourceTree = "<group>"; };
 		8BE6D51C18AE0456008EC2B7 /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NibLoading.h"; sourceTree = "<group>"; };
@@ -135,12 +138,12 @@
 		8B1DE7CE185A9DED009DEEC6 = {
 			isa = PBXGroup;
 			children = (
-				8B3623F318AB43D800346320 /* Category */,
+				8B988F71188FC696000DF2D0 /* Utility */,
 				8B2CC4F618A6229E005A7898 /* Resources */,
 				8B943FF7189646050010BA5B /* Commen */,
 				8B943FF1189636840010BA5B /* Views */,
 				8B943FAB1896295D0010BA5B /* Controllers */,
-				8B988F71188FC696000DF2D0 /* Utility */,
+				8B3623F318AB43D800346320 /* Category */,
 				8B9396A118861F75002C1583 /* Models */,
 				8B1DE7E0185A9DED009DEEC6 /* IOSBlogs_allanxing */,
 				8B1DE7F9185A9DED009DEEC6 /* IOSExercise_allanxingTests */,
@@ -312,11 +315,21 @@
 		8B988F71188FC696000DF2D0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8BAC2C9018CDACBF003AA342 /* MBProgressHUD */,
 				8BDC0A7618B3587E00E81A21 /* WebViewPhotoCache */,
 				8B943FF8189646790010BA5B /* Connection */,
 				8B943F9F1895EF500010BA5B /* GDataXML */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		8BAC2C9018CDACBF003AA342 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8BAC2C9118CDAD52003AA342 /* MBProgressHUD.h */,
+				8BAC2C9218CDAD52003AA342 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		8BDC0A7618B3587E00E81A21 /* WebViewPhotoCache */ = {
@@ -437,6 +450,7 @@
 				8B1C2F8E188D0A8B00F4E0AA /* Channel.m in Sources */,
 				8BDC0A7918B359B800E81A21 /* WebViewPhoneCache.m in Sources */,
 				8B1DE7E7185A9DED009DEEC6 /* main.m in Sources */,
+				8BAC2C9318CDAD52003AA342 /* MBProgressHUD.m in Sources */,
 				8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */,
 				8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */,
 				8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */,

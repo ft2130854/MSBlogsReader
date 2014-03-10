@@ -102,7 +102,19 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Developer Tools Blogs" id="AI2-jl-oZw"/>
+                    <navigationItem key="navigationItem" title="Developer Tools Blogs" id="AI2-jl-oZw">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="14D-o9-ZYo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X4a-Uu-qh4">
+                                <rect key="frame" x="214" y="5" width="90" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Clear Cache"/>
+                                <connections>
+                                    <action selector="ClearCacheAction:" destination="ROp-9d-F2T" eventType="touchDown" id="bZ5-1h-gGA"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juU-CZ-jMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

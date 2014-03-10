@@ -16,7 +16,7 @@ static WebViewPhoneCache *instance;
     if (!instance) {
         instance= [WebViewPhoneCache new];
     }
-     return instance;
+    return instance;
 }
 
 
@@ -44,14 +44,14 @@ static WebViewPhoneCache *instance;
     NSUserDefaults *localStroe=[NSUserDefaults standardUserDefaults];
     NSMutableDictionary *dic= [[NSMutableDictionary alloc] initWithDictionary:[localStroe dictionaryForKey:cDictionary]];
     for (NSInteger i=0; i<dic.count; i++) {
-      NSString * url=  dic.allValues[i];
+        NSString * url=  dic.allValues[i];
         [localStroe removeObjectForKey:url];
     }
     [localStroe removeObjectForKey:cDictionary];
     
 }
 -(Boolean)hasDataForURL:(NSString *)pathString{
-  NSObject  *image=   [_localStroe objectForKey:pathString];
+    NSObject  *image=   [_localStroe objectForKey:pathString];
     if (image) {
         return YES;
     }

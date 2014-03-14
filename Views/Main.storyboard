@@ -87,10 +87,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BcS-SP-Vs0">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" id="BcS-SP-Vs0">
                                             <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -125,8 +125,8 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="6s7-vd-9WX" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UcU-ct-Kwd"/>
-                        <viewControllerLayoutGuide type="bottom" id="oIF-Lf-TjX"/>
+                        <viewControllerLayoutGuide type="top" id="t4s-Vr-Oox"/>
+                        <viewControllerLayoutGuide type="bottom" id="i2T-jc-SXG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BdO-CO-8ya">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XHy-Yy-3s8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XHy-Yy-3s8">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -38,13 +38,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="a1o-yu-vvV">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="a1o-yu-vvV">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a1o-yu-vvV" id="hEe-V6-wG3">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SVt-rh-dcm" kind="push" id="iyM-ww-QG9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -53,6 +56,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qz-iX-Ouu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1319" y="-376"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Had-kT-eHQ">
+            <objects>
+                <viewController id="SVt-rh-dcm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8As-DT-3hW"/>
+                        <viewControllerLayoutGuide type="bottom" id="tkp-IF-M0I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hCs-1u-G0K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lJ2-8u-6fx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXU-TW-EGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834" y="-376"/>
         </scene>
         <!--Navigation Controller - About-->
         <scene sceneID="Fio-Fc-gNe">
@@ -97,7 +119,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6s7-vd-9WX" kind="push" identifier="pushToDetail" id="OMl-CH-IVY"/>
+                                    <segue destination="6s7-vd-9WX" kind="push" identifier="pushToDetail" id="nDH-Ps-rv8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

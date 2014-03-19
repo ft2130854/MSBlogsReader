@@ -5,7 +5,7 @@
 //  Created by AgnesT on 14-1-27.
 //  Copyright (c) 2014年 allan. All rights reserved.
 //
-
+//#define isUseTextModel
 #import "BlogTableViewController.h"
 #import "NSURLConnectionExercise.h"
 #import "GDataXMLNode.h"
@@ -40,13 +40,13 @@
     hud.labelText=@"Loading...";
     //true  feed
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
-
-//    [ex StartConnection];
-    
+#ifdef  isUseTextModel
+    [ex StartConnection];
+#else
     //local test feed
     NSString* path = [[NSBundle mainBundle] pathForResource:@"testFeed" ofType:@"xml"];
     [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
-    
+#endif
    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

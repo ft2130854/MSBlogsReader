@@ -13,6 +13,7 @@
 #import "DetailViewController.h"
 #import "WebViewPhoneCache.h"
 #import "MBProgressHUD.h"
+#import "NSDateUtilities.h"
 
 @interface BlogTableViewController ()
 
@@ -33,7 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+  NSDate *date=  [NSDate dateWithString:@"1970/01/02 00:00:00"];
+    long l=  [date timeIntervalSince1970];
     _channel=[Channel new];
 
    hud=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];

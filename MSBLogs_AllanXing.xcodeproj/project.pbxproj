@@ -24,6 +24,7 @@
 		8B1DE7F6185A9DED009DEEC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1DE7DE185A9DED009DEEC6 /* UIKit.framework */; };
 		8B1DE7FE185A9DED009DEEC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1DE7FC185A9DED009DEEC6 /* InfoPlist.strings */; };
 		8B1DE800185A9DED009DEEC6 /* IOSExercise_allanxingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DE7FF185A9DED009DEEC6 /* IOSExercise_allanxingTests.m */; };
+		8B231D3818E01DEF001EB550 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B231D3718E01DEF001EB550 /* Data.plist */; };
 		8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */; };
 		8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F218A5FED1005A7898 /* AboutViewController.m */; };
 		8B2CC4F918A6262F005A7898 /* book_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F818A6262F005A7898 /* book_24.png */; };
@@ -82,6 +83,7 @@
 		8B1DE7FB185A9DED009DEEC6 /* MSBLogs_AllanXingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSBLogs_AllanXingTests-Info.plist"; sourceTree = "<group>"; };
 		8B1DE7FD185A9DED009DEEC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B1DE7FF185A9DED009DEEC6 /* IOSExercise_allanxingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSExercise_allanxingTests.m; sourceTree = "<group>"; };
+		8B231D3718E01DEF001EB550 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data.plist; path = Resource/Data.plist; sourceTree = SOURCE_ROOT; };
 		8B23ABEA1884DEDC0090EFAE /* AllanNetWorkProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllanNetWorkProtocol.h; path = IOSExercise_allanxing/AllanNetWorkProtocol.h; sourceTree = "<group>"; };
 		8B23ABEB1885331E0090EFAE /* AllanXmlParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllanXmlParse.h; sourceTree = "<group>"; };
 		8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllanXmlParse.m; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				8B3623F718AB556B00346320 /* testFeed.xml */,
 				8B2CC4F718A62537005A7898 /* Images */,
+				8B231D3718E01DEF001EB550 /* Data.plist */,
 			);
 			name = Resources;
 			path = MSBLogs_AllanXing.xcodeproj;
@@ -433,6 +436,7 @@
 				8B2CC4F918A6262F005A7898 /* book_24.png in Resources */,
 				8B3623F818AB556B00346320 /* testFeed.xml in Resources */,
 				8B1DE7ED185A9DED009DEEC6 /* Images.xcassets in Resources */,
+				8B231D3818E01DEF001EB550 /* Data.plist in Resources */,
 				8BF6A5361861943E00BAE6A5 /* Application.xib in Resources */,
 				8B2CC4FB18A62769005A7898 /* info_24.png in Resources */,
 			);

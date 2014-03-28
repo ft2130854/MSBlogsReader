@@ -33,6 +33,8 @@
 		8B2CC4FB18A62769005A7898 /* info_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4FA18A62769005A7898 /* info_24.png */; };
 		8B3623F818AB556B00346320 /* testFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B3623F718AB556B00346320 /* testFeed.xml */; };
 		8B3623FB18AB5E3700346320 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3623FA18AB5E3700346320 /* Constant.m */; };
+		8B5E41A918E5748C001A840D /* Entity2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41A818E5748C001A840D /* Entity2.m */; };
+		8B5E41AC18E5748C001A840D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41AB18E5748C001A840D /* Entity.m */; };
 		8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */; };
 		8B6001BD18AA16D400ACB4C4 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
@@ -98,6 +100,10 @@
 		8B3623F718AB556B00346320 /* testFeed.xml */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; lineEnding = 0; path = testFeed.xml; sourceTree = "<group>"; };
 		8B3623F918AB5E3700346320 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		8B3623FA18AB5E3700346320 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		8B5E41A718E5748C001A840D /* Entity2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity2.h; path = Models/CoreDataEntity/Entity2.h; sourceTree = "<group>"; };
+		8B5E41A818E5748C001A840D /* Entity2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity2.m; path = Models/CoreDataEntity/Entity2.m; sourceTree = "<group>"; };
+		8B5E41AA18E5748C001A840D /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Models/CoreDataEntity/Entity.h; sourceTree = "<group>"; };
+		8B5E41AB18E5748C001A840D /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Models/CoreDataEntity/Entity.m; sourceTree = "<group>"; };
 		8B6001B918AA16D400ACB4C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Views/DetailViewController.h; sourceTree = "<group>"; };
 		8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Views/DetailViewController.m; sourceTree = "<group>"; };
 		8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = Views/DetailViewController.xib; sourceTree = "<group>"; };
@@ -267,9 +273,31 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		8B5E41A618E572B5001A840D /* CoreDataEntity */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E41AA18E5748C001A840D /* Entity.h */,
+				8B5E41AB18E5748C001A840D /* Entity.m */,
+				8B5E41A718E5748C001A840D /* Entity2.h */,
+				8B5E41A818E5748C001A840D /* Entity2.m */,
+			);
+			name = CoreDataEntity;
+			sourceTree = "<group>";
+		};
+		8B7B7A5A18E54C7E0081C53C /* LocalStore */ = {
+			isa = PBXGroup;
+			children = (
+				844C59F218DC8BA000082AE1 /* LocalStoreHelper.h */,
+				844C59F318DC8BA000082AE1 /* LocalStoreHelper.m */,
+				84D659CB18E4795800F64AF8 /* BlogModel.xcdatamodeld */,
+			);
+			name = LocalStore;
+			sourceTree = "<group>";
+		};
 		8B9396A118861F75002C1583 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8B5E41A618E572B5001A840D /* CoreDataEntity */,
 				8B1C2F8C188D0A8B00F4E0AA /* Channel.h */,
 				8B1C2F8D188D0A8B00F4E0AA /* Channel.m */,
 				8B1C2F92188D1FCC00F4E0AA /* Item.h */,
@@ -336,9 +364,7 @@
 				8BDC0A7618B3587E00E81A21 /* WebViewPhotoCache */,
 				8B943FF8189646790010BA5B /* Connection */,
 				8B943F9F1895EF500010BA5B /* GDataXML */,
-				844C59F218DC8BA000082AE1 /* LocalStoreHelper.h */,
-				844C59F318DC8BA000082AE1 /* LocalStoreHelper.m */,
-				84D659CB18E4795800F64AF8 /* BlogModel.xcdatamodeld */,
+				8B7B7A5A18E54C7E0081C53C /* LocalStore */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -464,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5E41A918E5748C001A840D /* Entity2.m in Sources */,
 				844C59F418DC8BA000082AE1 /* LocalStoreHelper.m in Sources */,
 				8B1C2F94188D1FCC00F4E0AA /* Item.m in Sources */,
 				8BB0E80018DAD2B900073A49 /* NSDateUtilities.m in Sources */,
@@ -473,6 +500,7 @@
 				8B1A59EA18A85EF700FF41E2 /* BlogViewController.m in Sources */,
 				8B1C2F8E188D0A8B00F4E0AA /* Channel.m in Sources */,
 				8BDC0A7918B359B800E81A21 /* WebViewPhoneCache.m in Sources */,
+				8B5E41AC18E5748C001A840D /* Entity.m in Sources */,
 				8B1DE7E7185A9DED009DEEC6 /* main.m in Sources */,
 				8BAC2C9318CDAD52003AA342 /* MBProgressHUD.m in Sources */,
 				8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */,
@@ -614,7 +642,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = MSBLogs_AllanXing;
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
@@ -638,7 +666,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = MSBLogs_AllanXing;
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;

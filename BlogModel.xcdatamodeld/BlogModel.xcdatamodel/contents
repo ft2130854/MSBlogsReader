@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Entity" syncable="YES">
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Entity" representedClassName="Entity" syncable="YES">
+        <attribute name="articleList" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="self1" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Entity2" inverseName="relationship" inverseEntity="Entity2" syncable="YES"/>
+    </entity>
+    <entity name="Entity2" representedClassName="Entity2" syncable="YES">
+        <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attribute1" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity" inverseName="self1" inverseEntity="Entity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entity" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Entity" positionX="-4104" positionY="-1198" width="128" height="73"/>
+        <element name="Entity2" positionX="-4268" positionY="-1197" width="128" height="88"/>
     </elements>
 </model>

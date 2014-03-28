@@ -8,8 +8,11 @@
 
 #import "LocalStoreHelper.h"
 
-@implementation LocalStoreHelper
 
+@implementation LocalStoreHelper{
+    
+}
+@synthesize managedObjectContext;
 - (id) init {
     self = [super init];
     if (self) {
@@ -38,5 +41,29 @@
 //                                                            objectForKey:@"Phones"]];
     }
     return self;
+}
+
+-(void)somemethod:(NSString *) s{
+    NSManagedObjectContext *context = [self managedObjectContext];
+//    
+//    NSManagedObject *failedBankInfo = [NSEntityDescription
+//                                       insertNewObjectForEntityForName:@"FailedBankInfo"
+//                                       inManagedObjectContext:context];
+//    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
+//    [failedBankInfo setValue:@"Testville" forKey:@"city"];
+//    [failedBankInfo setValue:@"Testland" forKey:@"state"];
+//    NSManagedObject *failedBankDetails = [NSEntityDescription
+//                                          insertNewObjectForEntityForName:@"FailedBankDetails"
+//                                          inManagedObjectContext:context];
+//    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
+//    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
+//    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
+//    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
+//    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
+//    NSError *error;
+//    if (![context save:&error]) {
+//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+//    }
+
 }
 @end

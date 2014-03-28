@@ -36,6 +36,7 @@ UIView *myView;
     // Override point for customization after application launch.
     
 //       [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

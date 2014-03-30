@@ -14,6 +14,9 @@
 #import "WebViewPhoneCache.h"
 #import "MBProgressHUD.h"
 #import "NSDateUtilities.h"
+#import "LocalStoreHelper.h"
+#import "Entity.h"
+#import "Constant.h"
 
 @interface BlogTableViewController ()
 
@@ -35,21 +38,25 @@
 {
     [super viewDidLoad];
     
-//  NSDate *date=  [NSDate dateWithString:@"1970/01/02 00:00:00"];
-//    long l=  [date timeIntervalSince1970];
+//    LocalStoreHelper * ls=[LocalStoreHelper new];
+//    [ls somemethod:@"d"];
+//    NSArray *array=   [ls fetchSomeDataForModel:@"Entity"];
+//    Entity * entity=array[0];
+//    NSLog(@"%@",entity.articleList);
+
     
     
     _channel=[Channel new];
 
-   hud=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
-    hud.labelText=@"Loading...";
+   ProgressBar=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
+    ProgressBar.labelText=@"Loading...";
 #ifdef  isUseTextModel
     //true  feed
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
     [ex StartConnection];
 #else
     //local test feed
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"testFeed" ofType:@"xml"];
+    NSString* path = [[NSBundle mainBundle] pathForResource:localCachFile ofType:@"xml"];
     [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
 #endif
    
@@ -98,6 +105,20 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        NSError *error;
+        NSString* path = [[NSBundle mainBundle] pathForResource:localCachFile ofType:@"xml"];
+        NSString *s=     [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+        GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:s options:0 error:&error];
+        NSArray *array=[[doc rootElement] elementsForName:[Channel Name]];
+        GDataXMLElement * element= (GDataXMLElement *) array[0];
+       
+      //  [element removeChild: [element childAtIndex:indexPath.row]];
+       
+        GDataXMLNode * gmlnode= [element elementsForName:[Channel ItemsElementName]][indexPath.row];
+        [element removeChild:gmlnode];
+        NSData *willSaveString=[doc XMLData];
+        
+        [willSaveString writeToFile:path atomically:YES];
         [_channel.Items removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -160,9 +181,9 @@
     _channel.Link=[[element elementsForName:[Channel LinkElementName]][0] stringValue];
     _channel.Generator=[[element elementsForName:[Channel GeneratorElementName]][0]stringValue];
     _channel.Items=[[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
-    
+   
     //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
-    [hud hide:YES];
+    [ProgressBar hide:YES];
     
 }
 

@@ -14,6 +14,7 @@
 #import "Channel.h"
 #import "WebViewPhoneCache.h"
 
+
 @interface XYQAppDelegate ()<UITabBarControllerDelegate,UINavigationBarDelegate>
 
 
@@ -32,7 +33,8 @@ UIView *myView;
                                                          diskCapacity:20 * 1024 * 1024
                                                              diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+   //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
 //       [self.window makeKeyAndVisible];

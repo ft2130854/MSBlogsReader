@@ -14,4 +14,6 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 -(void)saveContext;
+-(NSArray *)fetchSomeDataForModel:(NSString *)modelName;
+-(void)somemethod:(NSString *) s;
 @end

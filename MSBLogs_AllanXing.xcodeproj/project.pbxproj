@@ -32,11 +32,9 @@
 		8B2CC4F918A6262F005A7898 /* book_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F818A6262F005A7898 /* book_24.png */; };
 		8B2CC4FB18A62769005A7898 /* info_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4FA18A62769005A7898 /* info_24.png */; };
 		8B3623F818AB556B00346320 /* testFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B3623F718AB556B00346320 /* testFeed.xml */; };
-		8B3623FB18AB5E3700346320 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3623FA18AB5E3700346320 /* Constant.m */; };
 		8B5E41A918E5748C001A840D /* Entity2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41A818E5748C001A840D /* Entity2.m */; };
 		8B5E41AC18E5748C001A840D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41AB18E5748C001A840D /* Entity.m */; };
 		8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */; };
-		8B6001BD18AA16D400ACB4C4 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
 		8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B943FA918960A9D0010BA5B /* libxml2.dylib */; };
 		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
@@ -63,6 +61,7 @@
 /* Begin PBXFileReference section */
 		844C59F218DC8BA000082AE1 /* LocalStoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalStoreHelper.h; path = Utility/LocalStoreHelper.h; sourceTree = "<group>"; };
 		844C59F318DC8BA000082AE1 /* LocalStoreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalStoreHelper.m; path = Utility/LocalStoreHelper.m; sourceTree = "<group>"; };
+		848583F118E7FA6D006793F7 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Commen/Constant.h; sourceTree = "<group>"; };
 		84D659C918E478F700F64AF8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84D659CC18E4795800F64AF8 /* BlogModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlogModel.xcdatamodel; sourceTree = "<group>"; };
 		8B1A59E818A85EF700FF41E2 /* BlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogViewController.h; path = Controllers/BlogViewController.h; sourceTree = "<group>"; };
@@ -98,15 +97,12 @@
 		8B2CC4F818A6262F005A7898 /* book_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_24.png; sourceTree = "<group>"; };
 		8B2CC4FA18A62769005A7898 /* info_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_24.png; sourceTree = "<group>"; };
 		8B3623F718AB556B00346320 /* testFeed.xml */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; lineEnding = 0; path = testFeed.xml; sourceTree = "<group>"; };
-		8B3623F918AB5E3700346320 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		8B3623FA18AB5E3700346320 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		8B5E41A718E5748C001A840D /* Entity2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity2.h; path = Models/CoreDataEntity/Entity2.h; sourceTree = "<group>"; };
 		8B5E41A818E5748C001A840D /* Entity2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity2.m; path = Models/CoreDataEntity/Entity2.m; sourceTree = "<group>"; };
 		8B5E41AA18E5748C001A840D /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Models/CoreDataEntity/Entity.h; sourceTree = "<group>"; };
 		8B5E41AB18E5748C001A840D /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Models/CoreDataEntity/Entity.m; sourceTree = "<group>"; };
 		8B6001B918AA16D400ACB4C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Views/DetailViewController.h; sourceTree = "<group>"; };
 		8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Views/DetailViewController.m; sourceTree = "<group>"; };
-		8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = Views/DetailViewController.xib; sourceTree = "<group>"; };
 		8B943FA01895EF500010BA5B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		8B943FA11895EF500010BA5B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
@@ -206,8 +202,6 @@
 				8B23ABEC1885331E0090EFAE /* AllanXmlParse.m */,
 				8B1C2F8F188D18A000F4E0AA /* TestFile.h */,
 				8B1C2F90188D18A000F4E0AA /* TestFile.m */,
-				8B3623F918AB5E3700346320 /* Constant.h */,
-				8B3623FA18AB5E3700346320 /* Constant.m */,
 			);
 			name = IOSBlogs_allanxing;
 			path = IOSExercise_allanxing;
@@ -326,7 +320,6 @@
 				8B1A59E918A85EF700FF41E2 /* BlogViewController.m */,
 				8B6001B918AA16D400ACB4C4 /* DetailViewController.h */,
 				8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */,
-				8B6001BB18AA16D400ACB4C4 /* DetailViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -343,6 +336,7 @@
 		8B943FF7189646050010BA5B /* Commen */ = {
 			isa = PBXGroup;
 			children = (
+				848583F118E7FA6D006793F7 /* Constant.h */,
 			);
 			name = Commen;
 			sourceTree = "<group>";
@@ -465,7 +459,6 @@
 			files = (
 				8B1DE7E5185A9DED009DEEC6 /* InfoPlist.strings in Resources */,
 				8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */,
-				8B6001BD18AA16D400ACB4C4 /* DetailViewController.xib in Resources */,
 				8B2CC4F918A6262F005A7898 /* book_24.png in Resources */,
 				8B3623F818AB556B00346320 /* testFeed.xml in Resources */,
 				8B1DE7ED185A9DED009DEEC6 /* Images.xcassets in Resources */,
@@ -510,7 +503,6 @@
 				8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */,
 				8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */,
 				8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */,
-				8B3623FB18AB5E3700346320 /* Constant.m in Sources */,
 				8B1DE7EB185A9DED009DEEC6 /* XYQAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

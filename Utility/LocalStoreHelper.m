@@ -8,6 +8,7 @@
 
 #import "LocalStoreHelper.h"
 #import <CoreData/CoreData.h>
+#import "Entity.h"
 
 @implementation LocalStoreHelper{
     
@@ -39,9 +40,9 @@
         if (!temp) {
             NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
         }
-//        self.personName = [temp objectForKey:@"Name"];
-//        self.phoneNumbers = [NSMutableArray arrayWithArray:[temp
-//                                                            objectForKey:@"Phones"]];
+        //        self.personName = [temp objectForKey:@"Name"];
+        //        self.phoneNumbers = [NSMutableArray arrayWithArray:[temp
+        //                                                            objectForKey:@"Phones"]];
     }
     return self;
 }
@@ -49,25 +50,33 @@
 -(void)somemethod:(NSString *) s{
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSManagedObject *failedBankInfo = [NSEntityDescription
+    Entity *failedBankInfo = [NSEntityDescription
                                        insertNewObjectForEntityForName:@"Entity"
                                        inManagedObjectContext:context];
-    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
-    [failedBankInfo setValue:@"Testville" forKey:@"city"];
-    [failedBankInfo setValue:@"Testland" forKey:@"state"];
-    NSManagedObject *failedBankDetails = [NSEntityDescription
-                                          insertNewObjectForEntityForName:@"FailedBankDetails"
-                                          inManagedObjectContext:context];
-    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
-    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
-    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
-    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
-    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
+    failedBankInfo.articleList=@"hahahahdskflsdjakf;jsdklf******888888888";
+//    NSManagedObject *failedBankDetails = [NSEntityDescription
+//                                          insertNewObjectForEntityForName:@"FailedBankDetails"
+//                                          inManagedObjectContext:context];
+//    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
+//    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
+//    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
+//    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
+//    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
     NSError *error;
     if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
+    
+}
 
+-(NSArray *)fetchSomeDataForModel:(NSString *)modelName{
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:modelName
+    inManagedObjectContext:[self managedObjectContext]];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    return fetchedObjects;
 }
 
 - (void)saveContext

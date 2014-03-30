@@ -13,7 +13,7 @@
 @interface BlogTableViewController : UITableViewController{
 @public Channel *_channel;
 @private NSInteger _index;
-MBProgressHUD *hud;
+MBProgressHUD *ProgressBar;
 }
 -(IBAction)tableViewItemSelector:(id)sender;
 -(IBAction)ClearCacheAction:(id)sender;

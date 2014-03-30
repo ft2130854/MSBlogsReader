@@ -7,6 +7,8 @@
 //
 
 #import "WebViewPhoneCache.h"
+#import "Constant.h"
+
 static WebViewPhoneCache *instance;
 
 @implementation WebViewPhoneCache
@@ -50,6 +52,8 @@ static WebViewPhoneCache *instance;
     [localStroe removeObjectForKey:cDictionary];
     
 }
+
+
 -(Boolean)hasDataForURL:(NSString *)pathString{
     NSObject  *image=   [_localStroe objectForKey:pathString];
     if (image) {

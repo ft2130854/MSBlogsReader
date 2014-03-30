@@ -47,7 +47,7 @@
     
     
     _channel=[Channel new];
-
+    _httpTempChannel=[Channel new];
    ProgressBar=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
     ProgressBar.labelText=@"Loading...";
 #ifdef  isUseTextModel

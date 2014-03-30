@@ -12,6 +12,7 @@
 
 @interface BlogTableViewController : UITableViewController{
 @public Channel *_channel;
+@public Channel *_httpTempChannel;
 @private NSInteger _index;
 MBProgressHUD *ProgressBar;
 }

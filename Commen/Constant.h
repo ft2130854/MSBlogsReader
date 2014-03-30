@@ -9,4 +9,4 @@
 
 #define localCachFile @"testFeed"
 
-
+#define cDictionary @"CacheDictionary"

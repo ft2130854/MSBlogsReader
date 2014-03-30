@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface LocalStoreHelper : UIViewController
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+-(void)saveContext;
 @end

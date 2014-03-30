@@ -55,6 +55,7 @@
     [reciveData setLength:0];
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
     int code = [httpResponse statusCode];
+    NSLog(@"code: %d",code);
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{

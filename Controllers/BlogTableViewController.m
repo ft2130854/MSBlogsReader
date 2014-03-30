@@ -43,9 +43,9 @@
 
    hud=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
     hud.labelText=@"Loading...";
+#ifdef  isUseTextModel
     //true  feed
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
-#ifdef  isUseTextModel
     [ex StartConnection];
 #else
     //local test feed
@@ -77,9 +77,11 @@
 
 
 -(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:Nil];
-    DetailViewController *controller=  [sb instantiateViewControllerWithIdentifier:@"DetailViewController"];
+//    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:Nil];
+//    DetailViewController *controller=  [sb instantiateViewControllerWithIdentifier:@"DetailViewController"];
+//    [[self navigationController] pushViewController:controller animated:YES];
     _index=indexPath.item;
+    
     return indexPath;
 }
 

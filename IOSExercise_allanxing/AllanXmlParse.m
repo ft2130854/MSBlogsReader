@@ -20,7 +20,7 @@
         [parser setDelegate:self];
         [parser setShouldResolveExternalEntities:YES];
         BOOL success=[parser parse];
-        
+        NSLog(@"is Success:%hhd",success);
         
     }
     return self;

@@ -16,6 +16,7 @@
 @private NSInteger _index;
 MBProgressHUD *ProgressBar;
 }
+@property (assign, nonatomic) BOOL ascending;
 -(IBAction)tableViewItemSelector:(id)sender;
 -(IBAction)ClearCacheAction:(id)sender;
 @end

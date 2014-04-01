@@ -628,11 +628,11 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = MSBLogs_AllanXing;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -651,11 +651,11 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = MSBLogs_AllanXing;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

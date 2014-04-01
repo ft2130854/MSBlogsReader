@@ -44,7 +44,12 @@
 //    Entity * entity=array[0];
 //    NSLog(@"%@",entity.articleList);
 
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
+    refreshControl.tintColor =[UIColor magentaColor];
+    refreshControl.attributedTitle=[[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     
+    self.refreshControl = refreshControl;
+    [refreshControl addTarget:self action:@selector(changeSorting) forControlEvents:UIControlEventValueChanged];
     
     _channel=[Channel new];
     _httpTempChannel=[Channel new];
@@ -65,6 +70,27 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)changeSorting
+{
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:self.ascending];
+//    NSArray *sortDescriptors = @[sortDescriptor];
+    
+//    _objects = [_objects sortedArrayUsingDescriptors:sortDescriptors];
+    
+    _ascending = !_ascending;
+    
+    [self performSelector:@selector(updateTable) withObject:nil
+               afterDelay:4];
+}
+
+- (void)updateTable
+{
+    
+    [self.tableView reloadData];
+    
+    [self.refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning

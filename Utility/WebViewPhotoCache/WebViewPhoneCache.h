@@ -13,8 +13,10 @@
     NSMutableDictionary *_cacheDictionary;
     WebViewPhoneCache *instance;
 }
+
 @property(nonatomic,setter = setCacheDictionary:) NSMutableDictionary *CacheDictionary;
 
++ (void) setCurrentTitle:(NSString *)val;
 +(WebViewPhoneCache *)sharedCache;
 +(void)ClearCache;
 -(Boolean)hasDataForURL:(NSString *)pathString;

@@ -14,9 +14,15 @@
 @public Channel *_channel;
 @public Channel *_httpTempChannel;
 @private NSInteger _index;
+    
+
 MBProgressHUD *ProgressBar;
 }
 @property (assign, nonatomic) BOOL ascending;
+@property (assign,nonatomic,getter = GetRefreshDateTime,setter = SetRefreshDateTime:)NSDate* RefreshDateTime;
+-(NSDate *)GetRefreshDateTime;
+-(void)SetRefreshDateTime:(NSDate* )value;
+
 -(IBAction)tableViewItemSelector:(id)sender;
 -(IBAction)ClearCacheAction:(id)sender;
 @end

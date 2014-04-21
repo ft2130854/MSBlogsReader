@@ -35,6 +35,7 @@
 		8B5E41A918E5748C001A840D /* Entity2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41A818E5748C001A840D /* Entity2.m */; };
 		8B5E41AC18E5748C001A840D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41AB18E5748C001A840D /* Entity.m */; };
 		8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */; };
+		8B920DD81905142D00EC693B /* CommonLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B920DD71905142D00EC693B /* CommonLib.m */; };
 		8B943FA21895EF500010BA5B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FA11895EF500010BA5B /* GDataXMLNode.m */; };
 		8B943FAA18960A9D0010BA5B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B943FA918960A9D0010BA5B /* libxml2.dylib */; };
 		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
@@ -103,6 +104,8 @@
 		8B5E41AB18E5748C001A840D /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Models/CoreDataEntity/Entity.m; sourceTree = "<group>"; };
 		8B6001B918AA16D400ACB4C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Views/DetailViewController.h; sourceTree = "<group>"; };
 		8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Views/DetailViewController.m; sourceTree = "<group>"; };
+		8B920DD61905142D00EC693B /* CommonLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonLib.h; path = Commen/CommonLib.h; sourceTree = "<group>"; };
+		8B920DD71905142D00EC693B /* CommonLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonLib.m; path = Commen/CommonLib.m; sourceTree = "<group>"; };
 		8B943FA01895EF500010BA5B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		8B943FA11895EF500010BA5B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
@@ -337,6 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				848583F118E7FA6D006793F7 /* Constant.h */,
+				8B920DD61905142D00EC693B /* CommonLib.h */,
+				8B920DD71905142D00EC693B /* CommonLib.m */,
 			);
 			name = Commen;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				8BDC0A7918B359B800E81A21 /* WebViewPhoneCache.m in Sources */,
 				8B5E41AC18E5748C001A840D /* Entity.m in Sources */,
 				8B1DE7E7185A9DED009DEEC6 /* main.m in Sources */,
+				8B920DD81905142D00EC693B /* CommonLib.m in Sources */,
 				8BAC2C9318CDAD52003AA342 /* MBProgressHUD.m in Sources */,
 				8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */,
 				8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */,

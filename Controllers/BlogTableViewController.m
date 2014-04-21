@@ -5,7 +5,7 @@
 //  Created by AgnesT on 14-1-27.
 //  Copyright (c) 2014年 allan. All rights reserved.
 //
-//#define isUseTextModel
+#define isUseTextModel
 #import "BlogTableViewController.h"
 #import "NSURLConnectionExercise.h"
 #import "GDataXMLNode.h"
@@ -38,12 +38,12 @@
 {
     [super viewDidLoad];
     
-//    LocalStoreHelper * ls=[LocalStoreHelper new];
-//    [ls somemethod:@"d"];
-//    NSArray *array=   [ls fetchSomeDataForModel:@"Entity"];
-//    Entity * entity=array[0];
-//    NSLog(@"%@",entity.articleList);
-
+    //    LocalStoreHelper * ls=[LocalStoreHelper new];
+    //    [ls somemethod:@"d"];
+    //    NSArray *array=   [ls fetchSomeDataForModel:@"Entity"];
+    //    Entity * entity=array[0];
+    //    NSLog(@"%@",entity.articleList);
+    
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
     refreshControl.tintColor =[UIColor magentaColor];
     refreshControl.attributedTitle=[[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
@@ -53,10 +53,13 @@
     
     _channel=[Channel new];
     _httpTempChannel=[Channel new];
-   ProgressBar=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
-    ProgressBar.labelText=@"Loading...";
-#ifdef  isUseTextModel
+    [self  showProgressbar];
+  #ifdef  isUseTextModel
     //true  feed
+    NSString* path = [[NSBundle mainBundle] pathForResource:localCachFile ofType:@"xml"];
+    [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
+    
+    [self  showProgressbar];
     NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
     [ex StartConnection];
 #else
@@ -64,20 +67,48 @@
     NSString* path = [[NSBundle mainBundle] pathForResource:localCachFile ofType:@"xml"];
     [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
 #endif
-   
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)SetRefreshDateTime:(NSDate *)value{
+    NSUserDefaults * userDefault=[NSUserDefaults standardUserDefaults];
+    [userDefault setObject:[NSDate date] forKey:RefreshTime];
+}
+
+-(NSDate *)GetRefreshDateTime{
+    NSUserDefaults * userDefault=[NSUserDefaults standardUserDefaults];
+    NSDate *date;
+    if([userDefault objectIsForcedForKey:RefreshTime]){
+        [userDefault setObject:[NSDate date] forKey:RefreshTime];
+        date =   (NSDate *)[userDefault objectForKey:RefreshTime];
+    }
+    else{
+        NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDate *currentDate = [NSDate date];
+        NSDateComponents *comps = [[NSDateComponents alloc] init];
+        [comps setYear:-18];
+        NSDate *minDate = [gregorian dateByAddingComponents:comps toDate:currentDate  options:0];
+        date=minDate;
+    }
+    return date;
+}
+
+-(void)showProgressbar{
+    ProgressBar=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
+    ProgressBar.labelText=@"Loading...";
+
+}
 - (void)changeSorting
 {
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:self.ascending];
-//    NSArray *sortDescriptors = @[sortDescriptor];
+    //    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:self.ascending];
+    //    NSArray *sortDescriptors = @[sortDescriptor];
     
-//    _objects = [_objects sortedArrayUsingDescriptors:sortDescriptors];
+    //    _objects = [_objects sortedArrayUsingDescriptors:sortDescriptors];
     
     _ascending = !_ascending;
     
@@ -110,9 +141,9 @@
 
 
 -(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:Nil];
-//    DetailViewController *controller=  [sb instantiateViewControllerWithIdentifier:@"DetailViewController"];
-//    [[self navigationController] pushViewController:controller animated:YES];
+    //    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:Nil];
+    //    DetailViewController *controller=  [sb instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    //    [[self navigationController] pushViewController:controller animated:YES];
     _index=indexPath.item;
     
     return indexPath;
@@ -137,9 +168,9 @@
         GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:s options:0 error:&error];
         NSArray *array=[[doc rootElement] elementsForName:[Channel Name]];
         GDataXMLElement * element= (GDataXMLElement *) array[0];
-       
-      //  [element removeChild: [element childAtIndex:indexPath.row]];
-       
+        
+        //  [element removeChild: [element childAtIndex:indexPath.row]];
+        
         GDataXMLNode * gmlnode= [element elementsForName:[Channel ItemsElementName]][indexPath.row];
         [element removeChild:gmlnode];
         NSData *willSaveString=[doc XMLData];
@@ -178,18 +209,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//#warning Incomplete method implementation.
+    //#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [_channel.Items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-       static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     [cell textLabel].text=[_channel.Items[indexPath.row] Title];
     // Configure the cell...
-
+    
     return cell;
 }
 
@@ -206,8 +237,12 @@
     _channel.CopyRight=[[element elementsForName:[Channel CopyRightElementName]][0] stringValue];
     _channel.Link=[[element elementsForName:[Channel LinkElementName]][0] stringValue];
     _channel.Generator=[[element elementsForName:[Channel GeneratorElementName]][0]stringValue];
-    _channel.Items=[[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
-   
+    NSMutableArray * newArray=  [[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
+    if (_channel.Items==nil||_channel.Items.count==0) {
+        _channel.Items=[[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
+    }else{
+        [_channel.Items addObjectsFromArray:newArray];
+    }
     //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
     [ProgressBar hide:YES];
     
@@ -218,31 +253,31 @@
 
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
+ #pragma mark - Navigation
+ 
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ 
  */
 
 @end

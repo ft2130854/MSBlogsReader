@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "WebViewPhoneCache.h"
 
 @interface DetailViewController ()
 
@@ -31,11 +32,14 @@
     if (webView) {
         if (ArticleItem) {
             self.title=ArticleItem.Title;
+            [WebViewPhoneCache setCurrentTitle:ArticleItem.Title];
             [webView loadHTMLString:ArticleItem.Description baseURL:NULL];
         }
     }
     // Do any additional setup after loading the view from its nib.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

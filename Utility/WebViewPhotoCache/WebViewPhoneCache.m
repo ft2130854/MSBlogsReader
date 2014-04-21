@@ -11,8 +11,11 @@
 
 static WebViewPhoneCache *instance;
 
-@implementation WebViewPhoneCache
-
+@implementation WebViewPhoneCache{
+    
+    
+}
+ static NSString * CurrentTitle;
 
 +(WebViewPhoneCache *)sharedCache{
     if (!instance) {
@@ -21,6 +24,9 @@ static WebViewPhoneCache *instance;
     return instance;
 }
 
++(void)setCurrentTitle:(NSString *)val{
+    CurrentTitle=val;
+}
 
 
 - (id)init
@@ -33,6 +39,7 @@ static WebViewPhoneCache *instance;
         if (!_cacheDictionary) {
             _cacheDictionary=[NSMutableDictionary new];
         }
+        CurrentTitle=[NSString new];
     }
     return self;
 }
@@ -67,12 +74,11 @@ static WebViewPhoneCache *instance;
     return data;
 }
 
+
+
 -(void)storeData:(NSData *)storeData forURL: (NSString *)pathString{
     [_localStroe setObject:storeData forKey:pathString];
-    NSDateFormatter *formatter=[NSDateFormatter new];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [_cacheDictionary setValue:pathString forKey:[formatter stringFromDate:[NSDate date]]];
+    [_cacheDictionary setValue:pathString forKey:CurrentTitle];
     self.CacheDictionary=  _cacheDictionary;
 }
 

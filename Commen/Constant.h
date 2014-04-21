@@ -9,4 +9,8 @@
 
 #define localCachFile @"testFeed"
 
+
+
+#pragma mark UserDefaultKey
 #define cDictionary @"CacheDictionary"
+#define RefreshTime @"RefreshTime"

@@ -8,7 +8,7 @@
 
 
 #define localCachFile @"testFeed"
-
+#define feedUrl @"http://sxp.microsoft.com/feeds/3.0/devblogs"
 
 
 #pragma mark UserDefaultKey

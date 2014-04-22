@@ -55,6 +55,7 @@ return @"title";
                 Item *item=[Item new];
                 item.Title=[[element elementsForName:[Item TitleElementName]][0]stringValue];
                 item.Description=[[element elementsForName:[Item DescriptionElementName]][0]stringValue];
+                item.PubDate=[[element elementsForName:[Item PubDateElementName]][0] stringValue];
                 [tempItems addObject:item];
             }
             _Items=tempItems;

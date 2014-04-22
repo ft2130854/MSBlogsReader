@@ -43,5 +43,5 @@
 
 @property (nonatomic,setter = setItems:) NSMutableArray *Items;
 
-
+-(void) setItems:(NSMutableArray *)Items;
 @end

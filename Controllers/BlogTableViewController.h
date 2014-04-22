@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Channel.h"
 #import "MBProgressHUD.h"
+#import "AllanNetWorkProtocol.h"
 
-@interface BlogTableViewController : UITableViewController{
+@interface BlogTableViewController: UITableViewController <AllanNetWorkProtocol>{
 @public Channel *_channel;
 @public Channel *_httpTempChannel;
 @private NSInteger _index;
@@ -18,7 +19,7 @@
 
 MBProgressHUD *ProgressBar;
 }
-@property (assign, nonatomic) BOOL ascending;
+
 @property (assign,nonatomic,getter = GetRefreshDateTime,setter = SetRefreshDateTime:)NSDate* RefreshDateTime;
 -(NSDate *)GetRefreshDateTime;
 -(void)SetRefreshDateTime:(NSDate* )value;

@@ -62,6 +62,12 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     connection=nil;
     reciveData=nil;
+    id<AllanNetWorkProtocol>  delegate;
+    delegate = [self delegate];
+    if ([delegate respondsToSelector:@selector(HttpStringCallBack:)]) {
+        [self.delegate HttpStringCallBack:@""];
+    }
+
     //and inform user
 }
 

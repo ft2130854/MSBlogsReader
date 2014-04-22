@@ -10,4 +10,5 @@
 
 @interface CommonLib : NSObject
 
++(NSDate *)DateWithString:(NSString *)string;
 @end

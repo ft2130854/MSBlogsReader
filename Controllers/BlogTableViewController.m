@@ -17,6 +17,7 @@
 #import "LocalStoreHelper.h"
 #import "Entity.h"
 #import "Constant.h"
+#import "CommonLib.h"
 
 @interface BlogTableViewController ()
 
@@ -49,18 +50,18 @@
     refreshControl.attributedTitle=[[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     
     self.refreshControl = refreshControl;
-    [refreshControl addTarget:self action:@selector(changeSorting) forControlEvents:UIControlEventValueChanged];
+    [refreshControl addTarget:self action:@selector(PullToRefresh) forControlEvents:UIControlEventValueChanged];
     
     _channel=[Channel new];
     _httpTempChannel=[Channel new];
     [self  showProgressbar];
-  #ifdef  isUseTextModel
+#ifdef  isUseTextModel
     //true  feed
     NSString* path = [[NSBundle mainBundle] pathForResource:localCachFile ofType:@"xml"];
     [self HttpStringCallBack:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]];
     
     [self  showProgressbar];
-    NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:@"http://sxp.microsoft.com/feeds/3.0/devblogs"]delegate:self];
+    NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:feedUrl]delegate:self];
     [ex StartConnection];
 #else
     //local test feed
@@ -77,7 +78,7 @@
 
 -(void)SetRefreshDateTime:(NSDate *)value{
     NSUserDefaults * userDefault=[NSUserDefaults standardUserDefaults];
-    [userDefault setObject:[NSDate date] forKey:RefreshTime];
+    [userDefault setObject:value forKey:RefreshTime];
 }
 
 -(NSDate *)GetRefreshDateTime{
@@ -101,19 +102,16 @@
 -(void)showProgressbar{
     ProgressBar=[MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
     ProgressBar.labelText=@"Loading...";
-
+    
 }
-- (void)changeSorting
+- (void)PullToRefresh
 {
-    //    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:self.ascending];
-    //    NSArray *sortDescriptors = @[sortDescriptor];
+    NSURLConnectionExercise *ex=[[NSURLConnectionExercise alloc] initWithUrl:[[NSURL alloc] initWithString:feedUrl]delegate:self];
+    [ex StartConnection];
     
-    //    _objects = [_objects sortedArrayUsingDescriptors:sortDescriptors];
+   
     
-    _ascending = !_ascending;
-    
-    [self performSelector:@selector(updateTable) withObject:nil
-               afterDelay:4];
+    //[self performSelector:@selector(updateTable) withObject:nil afterDelay:4];
 }
 
 - (void)updateTable
@@ -227,6 +225,11 @@
 #pragma mark - NSURLConnection delegate
 
 -(void) HttpStringCallBack:(NSString *)string{
+    if (!string||[string isEqual:@""]) {
+        [ProgressBar hide:YES];
+        [self.refreshControl endRefreshing];
+        return;
+    }
     NSError *error;
     GDataXMLDocument *doc=[[GDataXMLDocument alloc] initWithXMLString:string options:0 error:&error];
     NSArray *array=[[doc rootElement] elementsForName:[Channel Name]];
@@ -237,11 +240,32 @@
     _channel.CopyRight=[[element elementsForName:[Channel CopyRightElementName]][0] stringValue];
     _channel.Link=[[element elementsForName:[Channel LinkElementName]][0] stringValue];
     _channel.Generator=[[element elementsForName:[Channel GeneratorElementName]][0]stringValue];
-    NSMutableArray * newArray=  [[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
     if (_channel.Items==nil||_channel.Items.count==0) {
         _channel.Items=[[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
     }else{
-        [_channel.Items addObjectsFromArray:newArray];
+        NSMutableArray * tempOlder= _channel.Items;
+        NSMutableArray * newArray=  [[NSMutableArray alloc]initWithArray:[element elementsForName:[Channel ItemsElementName]]];
+        NSDate *leastRefreshDateTime=[self GetRefreshDateTime];
+         _channel.Items=newArray;
+        NSMutableArray *filterArray=[NSMutableArray new];
+        for (Item * it in _channel.Items) {
+            if( [[CommonLib DateWithString:it.PubDate] compare:leastRefreshDateTime]==NSOrderedDescending){
+                [filterArray addObject:it];
+            }
+        }
+        _channel.Items=filterArray;
+        [_channel.Items addObjectsFromArray:tempOlder];
+        [_channel.Items sortedArrayUsingComparator: ^(id obj1, id obj2){
+            Item * item1,*item2;
+            item1=(Item *)obj1;
+            item2=(Item *)obj2;
+            NSDate * date1=  [CommonLib DateWithString:item1.PubDate];
+            NSDate * date2=  [CommonLib DateWithString:item2.PubDate];
+            return [date1 compare:date2];
+        }];
+        Item *articalItem=(Item *)_channel.Items[0];
+        [self SetRefreshDateTime:[CommonLib DateWithString:articalItem.PubDate]];
+        [self updateTable];
     }
     //    AllanXmlParse *parse=[[AllanXmlParse alloc] initWithString:string];
     [ProgressBar hide:YES];

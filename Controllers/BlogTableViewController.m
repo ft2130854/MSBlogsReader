@@ -83,12 +83,9 @@
 
 -(NSDate *)GetRefreshDateTime{
     NSUserDefaults * userDefault=[NSUserDefaults standardUserDefaults];
-    NSDate *date;
-    if([userDefault objectIsForcedForKey:RefreshTime]){
-        [userDefault setObject:[NSDate date] forKey:RefreshTime];
-        date =   (NSDate *)[userDefault objectForKey:RefreshTime];
-    }
-    else{
+    NSDate *date=(NSDate *)[userDefault objectForKey:RefreshTime];;
+  //  if([userDefault objectIsForcedForKey:RefreshTime]){
+    if (!date){
         NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         NSDate *currentDate = [NSDate date];
         NSDateComponents *comps = [[NSDateComponents alloc] init];

@@ -1,10 +1,10 @@
-//
+/*！
 //  BlogTableViewController.m
 //  MSBLogs_AllanXing
-//
+//  @author
 //  Created by AgnesT on 14-1-27.
 //  Copyright (c) 2014年 allan. All rights reserved.
-//
+*/
 #define isUseTextModel
 #import "BlogTableViewController.h"
 #import "NSURLConnectionExercise.h"
@@ -76,6 +76,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+/*!
+ @brief	set refresh datetime
+ 
+ @param 	value of refresh datetime
+
+ @return
+
+ @link     https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/tags/tags.html
+
+ */
 -(void)SetRefreshDateTime:(NSDate *)value{
     NSUserDefaults * userDefault=[NSUserDefaults standardUserDefaults];
     [userDefault setObject:value forKey:RefreshTime];

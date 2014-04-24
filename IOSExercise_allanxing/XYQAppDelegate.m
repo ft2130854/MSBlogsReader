@@ -13,6 +13,8 @@
 #import "GDataXMLNode.h"
 #import "Channel.h"
 #import "WebViewPhoneCache.h"
+#import <ShareSDK/ShareSDK.h>
+#import "Constant.h"
 
 
 @interface XYQAppDelegate ()<UITabBarControllerDelegate,UINavigationBarDelegate>
@@ -34,6 +36,22 @@ UIView *myView;
                                                              diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
     
+    [ShareSDK registerApp:shareSDK_Key];
+    //sina
+    [ShareSDK connectSinaWeiboWithAppKey:@"3201194191"
+                               appSecret:@"0334252914651e8f76bad63337b3b78f"
+                             redirectUri:@"http://appgo.cn"];
+    //twitter
+    [ShareSDK connectTwitterWithConsumerKey:@"mnTGqtXk0TYMXYTN7qUxg"
+                             consumerSecret:@"ROkFqr8c3m1HXqS3rm3TJ0WkAJuwBOSaWhPbZ9Ojuc"
+                                redirectUri:@"http://www.sharesdk.cn"];
+    //facebook
+    [ShareSDK connectFacebookWithAppKey:@"107704292745179"
+                              appSecret:@"38053202e1a5fe26c80c753071f0b573"];
+    //linkedin
+    [ShareSDK connectLinkedInWithApiKey:@"ejo5ibkye3vo"
+                              secretKey:@"cC7B2jpxITqPLZ5M"
+                            redirectUri:@"http://sharesdk.cn"];
    //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     

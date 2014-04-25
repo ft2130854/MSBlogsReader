@@ -5,7 +5,7 @@
 //  Created by AgnesT on 14-1-27.
 //  Copyright (c) 2014年 allan. All rights reserved.
 */
-#define isUseTextModel
+//#define isUseTextModel
 #import "BlogTableViewController.h"
 #import "NSURLConnectionExercise.h"
 #import "GDataXMLNode.h"
@@ -44,6 +44,8 @@
     //    NSArray *array=   [ls fetchSomeDataForModel:@"Entity"];
     //    Entity * entity=array[0];
     //    NSLog(@"%@",entity.articleList);
+    
+    self.navigationController.navigationBar.barTintColor=UIColorFromRGB(0xe6e6e6);
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
     refreshControl.tintColor =[UIColor magentaColor];
@@ -223,7 +225,9 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     [cell textLabel].text=[_channel.Items[indexPath.row] Title];
+    
     // Configure the cell...
     
     return cell;

@@ -104,6 +104,7 @@
 		8B2CC4F918A6262F005A7898 /* book_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F818A6262F005A7898 /* book_24.png */; };
 		8B2CC4FB18A62769005A7898 /* info_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4FA18A62769005A7898 /* info_24.png */; };
 		8B3623F818AB556B00346320 /* testFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B3623F718AB556B00346320 /* testFeed.xml */; };
+		8B4F04E7190A4DF000342EBD /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4F04E6190A4DF000342EBD /* ArticleTableViewCell.xib */; };
 		8B5E41A918E5748C001A840D /* Entity2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41A818E5748C001A840D /* Entity2.m */; };
 		8B5E41AC18E5748C001A840D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41AB18E5748C001A840D /* Entity.m */; };
 		8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */; };
@@ -248,6 +249,8 @@
 		8B2CC4F818A6262F005A7898 /* book_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_24.png; sourceTree = "<group>"; };
 		8B2CC4FA18A62769005A7898 /* info_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_24.png; sourceTree = "<group>"; };
 		8B3623F718AB556B00346320 /* testFeed.xml */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; lineEnding = 0; path = testFeed.xml; sourceTree = "<group>"; };
+		8B4F04E5190A0DD100342EBD /* GlobalMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
+		8B4F04E6190A4DF000342EBD /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ArticleTableViewCell.xib; path = Views/ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		8B5E41A718E5748C001A840D /* Entity2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity2.h; path = Models/CoreDataEntity/Entity2.h; sourceTree = "<group>"; };
 		8B5E41A818E5748C001A840D /* Entity2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity2.m; path = Models/CoreDataEntity/Entity2.m; sourceTree = "<group>"; };
 		8B5E41AA18E5748C001A840D /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Models/CoreDataEntity/Entity.h; sourceTree = "<group>"; };
@@ -651,8 +654,8 @@
 		8B2CC4F618A6229E005A7898 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8B3623F718AB556B00346320 /* testFeed.xml */,
 				8B2CC4F718A62537005A7898 /* Images */,
+				8B3623F718AB556B00346320 /* testFeed.xml */,
 				8B231D3718E01DEF001EB550 /* Data.plist */,
 			);
 			name = Resources;
@@ -732,6 +735,7 @@
 			children = (
 				8BF6A5351861943E00BAE6A5 /* Application.xib */,
 				8B943FF218963D1C0010BA5B /* Main.storyboard */,
+				8B4F04E6190A4DF000342EBD /* ArticleTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -742,6 +746,7 @@
 				848583F118E7FA6D006793F7 /* Constant.h */,
 				8B920DD61905142D00EC693B /* CommonLib.h */,
 				8B920DD71905142D00EC693B /* CommonLib.m */,
+				8B4F04E5190A0DD100342EBD /* GlobalMacro.h */,
 			);
 			name = Commen;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				8B1DE7ED185A9DED009DEEC6 /* Images.xcassets in Resources */,
 				8B0065941908B14A002CA03F /* InstapaperResource.bundle in Resources */,
 				8B0065B51908B14A002CA03F /* RennSDK.bundle in Resources */,
+				8B4F04E7190A4DF000342EBD /* ArticleTableViewCell.xib in Resources */,
 				8B0065BD1908B14B002CA03F /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				8B231D3818E01DEF001EB550 /* Data.plist in Resources */,
 				8B0065BF1908B14B002CA03F /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,

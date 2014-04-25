@@ -1,5 +1,5 @@
 //
-//  LXFAppDelegate.m
+//  XYQAppDelegate.m
 //  IOSExercise_allanxing
 //
 //  Created by AgnesT on 13-12-13.

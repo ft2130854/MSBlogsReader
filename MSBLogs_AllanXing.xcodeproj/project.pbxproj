@@ -104,10 +104,11 @@
 		8B2CC4F918A6262F005A7898 /* book_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4F818A6262F005A7898 /* book_24.png */; };
 		8B2CC4FB18A62769005A7898 /* info_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B2CC4FA18A62769005A7898 /* info_24.png */; };
 		8B3623F818AB556B00346320 /* testFeed.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B3623F718AB556B00346320 /* testFeed.xml */; };
-		8B4F04E7190A4DF000342EBD /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4F04E6190A4DF000342EBD /* ArticleTableViewCell.xib */; };
+		8B3A8808190E33370027EC59 /* ArticleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A8806190E33370027EC59 /* ArticleTableViewCell.m */; };
+		8B3A8809190E33370027EC59 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A8807190E33370027EC59 /* ArticleTableViewCell.xib */; };
+		8B3A880C190E337F0027EC59 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A880B190E337F0027EC59 /* DetailViewController.m */; };
 		8B5E41A918E5748C001A840D /* Entity2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41A818E5748C001A840D /* Entity2.m */; };
 		8B5E41AC18E5748C001A840D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41AB18E5748C001A840D /* Entity.m */; };
-		8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */; };
 		8B920DD81905142D00EC693B /* CommonLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B920DD71905142D00EC693B /* CommonLib.m */; };
 		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
 		8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FF5189645CA0010BA5B /* BlogTableViewController.m */; };
@@ -249,14 +250,16 @@
 		8B2CC4F818A6262F005A7898 /* book_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_24.png; sourceTree = "<group>"; };
 		8B2CC4FA18A62769005A7898 /* info_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_24.png; sourceTree = "<group>"; };
 		8B3623F718AB556B00346320 /* testFeed.xml */ = {isa = PBXFileReference; explicitFileType = text.xml; fileEncoding = 4; lineEnding = 0; path = testFeed.xml; sourceTree = "<group>"; };
+		8B3A8805190E33370027EC59 /* ArticleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleTableViewCell.h; path = Views/ArticleTableViewCell.h; sourceTree = "<group>"; };
+		8B3A8806190E33370027EC59 /* ArticleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleTableViewCell.m; path = Views/ArticleTableViewCell.m; sourceTree = "<group>"; };
+		8B3A8807190E33370027EC59 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ArticleTableViewCell.xib; path = Views/ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		8B3A880A190E337F0027EC59 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controllers/DetailViewController.h; sourceTree = "<group>"; };
+		8B3A880B190E337F0027EC59 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controllers/DetailViewController.m; sourceTree = "<group>"; };
 		8B4F04E5190A0DD100342EBD /* GlobalMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalMacro.h; sourceTree = "<group>"; };
-		8B4F04E6190A4DF000342EBD /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ArticleTableViewCell.xib; path = Views/ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		8B5E41A718E5748C001A840D /* Entity2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity2.h; path = Models/CoreDataEntity/Entity2.h; sourceTree = "<group>"; };
 		8B5E41A818E5748C001A840D /* Entity2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity2.m; path = Models/CoreDataEntity/Entity2.m; sourceTree = "<group>"; };
 		8B5E41AA18E5748C001A840D /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Models/CoreDataEntity/Entity.h; sourceTree = "<group>"; };
 		8B5E41AB18E5748C001A840D /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = Models/CoreDataEntity/Entity.m; sourceTree = "<group>"; };
-		8B6001B918AA16D400ACB4C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Views/DetailViewController.h; sourceTree = "<group>"; };
-		8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Views/DetailViewController.m; sourceTree = "<group>"; };
 		8B920DD61905142D00EC693B /* CommonLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonLib.h; path = Commen/CommonLib.h; sourceTree = "<group>"; };
 		8B920DD71905142D00EC693B /* CommonLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonLib.m; path = Commen/CommonLib.m; sourceTree = "<group>"; };
 		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
@@ -718,14 +721,14 @@
 		8B943FAB1896295D0010BA5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B3A880A190E337F0027EC59 /* DetailViewController.h */,
+				8B3A880B190E337F0027EC59 /* DetailViewController.m */,
 				8B943FF4189645CA0010BA5B /* BlogTableViewController.h */,
 				8B943FF5189645CA0010BA5B /* BlogTableViewController.m */,
 				8B2CC4F118A5FED1005A7898 /* AboutViewController.h */,
 				8B2CC4F218A5FED1005A7898 /* AboutViewController.m */,
 				8B1A59E818A85EF700FF41E2 /* BlogViewController.h */,
 				8B1A59E918A85EF700FF41E2 /* BlogViewController.m */,
-				8B6001B918AA16D400ACB4C4 /* DetailViewController.h */,
-				8B6001BA18AA16D400ACB4C4 /* DetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -735,7 +738,9 @@
 			children = (
 				8BF6A5351861943E00BAE6A5 /* Application.xib */,
 				8B943FF218963D1C0010BA5B /* Main.storyboard */,
-				8B4F04E6190A4DF000342EBD /* ArticleTableViewCell.xib */,
+				8B3A8805190E33370027EC59 /* ArticleTableViewCell.h */,
+				8B3A8806190E33370027EC59 /* ArticleTableViewCell.m */,
+				8B3A8807190E33370027EC59 /* ArticleTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -882,7 +887,7 @@
 				8B1DE7ED185A9DED009DEEC6 /* Images.xcassets in Resources */,
 				8B0065941908B14A002CA03F /* InstapaperResource.bundle in Resources */,
 				8B0065B51908B14A002CA03F /* RennSDK.bundle in Resources */,
-				8B4F04E7190A4DF000342EBD /* ArticleTableViewCell.xib in Resources */,
+				8B3A8809190E33370027EC59 /* ArticleTableViewCell.xib in Resources */,
 				8B0065BD1908B14B002CA03F /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				8B231D3818E01DEF001EB550 /* Data.plist in Resources */,
 				8B0065BF1908B14B002CA03F /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
@@ -910,6 +915,7 @@
 			files = (
 				8B5E41A918E5748C001A840D /* Entity2.m in Sources */,
 				844C59F418DC8BA000082AE1 /* LocalStoreHelper.m in Sources */,
+				8B3A880C190E337F0027EC59 /* DetailViewController.m in Sources */,
 				8B1C2F94188D1FCC00F4E0AA /* Item.m in Sources */,
 				8BB0E80018DAD2B900073A49 /* NSDateUtilities.m in Sources */,
 				84D659CD18E4795800F64AF8 /* BlogModel.xcdatamodeld in Sources */,
@@ -920,13 +926,13 @@
 				8B1C2F8E188D0A8B00F4E0AA /* Channel.m in Sources */,
 				8BDC0A7918B359B800E81A21 /* WebViewPhoneCache.m in Sources */,
 				8B5E41AC18E5748C001A840D /* Entity.m in Sources */,
+				8B3A8808190E33370027EC59 /* ArticleTableViewCell.m in Sources */,
 				8B1DE7E7185A9DED009DEEC6 /* main.m in Sources */,
 				8B920DD81905142D00EC693B /* CommonLib.m in Sources */,
 				8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */,
 				8B0065CF1908B2B5002CA03F /* MBProgressHUD.m in Sources */,
 				8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */,
 				8B1C2F91188D18A000F4E0AA /* TestFile.m in Sources */,
-				8B6001BC18AA16D400ACB4C4 /* DetailViewController.m in Sources */,
 				8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */,
 				8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */,
 				8B1DE7EB185A9DED009DEEC6 /* XYQAppDelegate.m in Sources */,

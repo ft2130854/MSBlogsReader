@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UITableViewController
-
+@interface AboutViewController : UITableViewController{
+    
+}
+@property (weak,nonatomic)IBOutlet UILabel *DevTeamName;
 @end

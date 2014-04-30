@@ -17,6 +17,7 @@
 #import "LocalStoreHelper.h"
 #import "Entity.h"
 #import "Constant.h"
+#import "ArticleTableViewCell.h"
 #import "CommonLib.h"
 
 @interface BlogTableViewController ()
@@ -24,7 +25,7 @@
 @end
 
 @implementation BlogTableViewController
-
+ static NSString *CellIdentifier = @"Cell";
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.tableView registerClass:[ArticleTableViewCell class] forCellReuseIdentifier:@"Cell"];
     //    LocalStoreHelper * ls=[LocalStoreHelper new];
     //    [ls somemethod:@"d"];
     //    NSArray *array=   [ls fetchSomeDataForModel:@"Entity"];
@@ -223,14 +224,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    [cell textLabel].text=[_channel.Items[indexPath.row] Title];
-    
+   
+    ArticleTableViewCell *cell = (ArticleTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //[cell textLabel].text=[_channel.Items[indexPath.row] Title];
+    cell.LB_Title.text=[_channel.Items[indexPath.row] Title];
+    cell.LB_PubTime.text=[_channel.Items[indexPath.row] PubDate];
     // Configure the cell...
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ArticleTableViewCell *cell=(ArticleTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (cell.reuseIdentifier==CellIdentifier) {
+         [self performSegueWithIdentifier:@"pushToDetail" sender:self];
+    }
+   
 }
 
 #pragma mark - NSURLConnection delegate

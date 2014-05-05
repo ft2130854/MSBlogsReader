@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Item.h"
 
+
 @interface DetailViewController : UIViewController{
- IBOutlet UIWebView * webView;
+    IBOutlet UIWebView * webView;
+   
 }
 
 @property (nonatomic,weak) Item *ArticleItem;

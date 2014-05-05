@@ -15,6 +15,7 @@
 #import "WebViewPhoneCache.h"
 #import <ShareSDK/ShareSDK.h>
 #import "Constant.h"
+#import <iAd/UIViewControlleriAdAdditions.h>
 
 
 @interface XYQAppDelegate ()<UITabBarControllerDelegate,UINavigationBarDelegate>
@@ -56,6 +57,7 @@ UIView *myView;
     // Override point for customization after application launch.
     
 //       [self.window makeKeyAndVisible];
+    [UIViewController prepareInterstitialAds];
     
     return YES;
 }

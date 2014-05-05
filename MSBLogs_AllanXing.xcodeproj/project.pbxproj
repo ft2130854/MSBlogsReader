@@ -111,8 +111,10 @@
 		8B5E41AC18E5748C001A840D /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E41AB18E5748C001A840D /* Entity.m */; };
 		8B920DD81905142D00EC693B /* CommonLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B920DD71905142D00EC693B /* CommonLib.m */; };
 		8B943FF318963D1C0010BA5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B943FF218963D1C0010BA5B /* Main.storyboard */; };
-		8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B943FF5189645CA0010BA5B /* BlogTableViewController.m */; };
 		8BB0E80018DAD2B900073A49 /* NSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB0E7FF18DAD2B900073A49 /* NSDateUtilities.m */; };
+		8BC376911915EDB000CD1C17 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC376901915EDB000CD1C17 /* iAd.framework */; };
+		8BC3769D191609C000CD1C17 /* UIViewController+IAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3769C191609C000CD1C17 /* UIViewController+IAd.m */; };
+		8BC3769F19160BB700CD1C17 /* BlogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3769E19160BB700CD1C17 /* BlogTableViewController.m */; };
 		8BDC0A7918B359B800E81A21 /* WebViewPhoneCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC0A7818B359B800E81A21 /* WebViewPhoneCache.m */; };
 		8BE6D51E18AE0456008EC2B7 /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE6D51D18AE0456008EC2B7 /* UIView+NibLoading.m */; };
 		8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6A0DD18616CD300BAE6A5 /* mtTableView.m */; };
@@ -265,9 +267,12 @@
 		8B943FA918960A9D0010BA5B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
 		8B943FF218963D1C0010BA5B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 		8B943FF4189645CA0010BA5B /* BlogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlogTableViewController.h; path = Controllers/BlogTableViewController.h; sourceTree = "<group>"; };
-		8B943FF5189645CA0010BA5B /* BlogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogTableViewController.m; path = Controllers/BlogTableViewController.m; sourceTree = "<group>"; };
 		8BB0E7FE18DAD2B900073A49 /* NSDateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateUtilities.h; sourceTree = "<group>"; };
 		8BB0E7FF18DAD2B900073A49 /* NSDateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateUtilities.m; sourceTree = "<group>"; };
+		8BC376901915EDB000CD1C17 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		8BC3769B191609C000CD1C17 /* UIViewController+IAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+IAd.h"; path = "Category/UIViewController+IAd.h"; sourceTree = "<group>"; };
+		8BC3769C191609C000CD1C17 /* UIViewController+IAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+IAd.m"; path = "Category/UIViewController+IAd.m"; sourceTree = "<group>"; };
+		8BC3769E19160BB700CD1C17 /* BlogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlogTableViewController.m; path = Controllers/BlogTableViewController.m; sourceTree = "<group>"; };
 		8BDC0A7718B359B800E81A21 /* WebViewPhoneCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewPhoneCache.h; path = Utility/WebViewPhotoCache/WebViewPhoneCache.h; sourceTree = "<group>"; };
 		8BDC0A7818B359B800E81A21 /* WebViewPhoneCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewPhoneCache.m; path = Utility/WebViewPhotoCache/WebViewPhoneCache.m; sourceTree = "<group>"; };
 		8BE6D51C18AE0456008EC2B7 /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NibLoading.h"; sourceTree = "<group>"; };
@@ -284,6 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC376911915EDB000CD1C17 /* iAd.framework in Frameworks */,
 				8B0065DF1908B711002CA03F /* libxml2.2.dylib in Frameworks */,
 				8B0065DD1908B6BB002CA03F /* MessageUI.framework in Frameworks */,
 				8B0065DB1908B67F002CA03F /* Security.framework in Frameworks */,
@@ -589,6 +595,7 @@
 		8B1DE7D9185A9DED009DEEC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BC376901915EDB000CD1C17 /* iAd.framework */,
 				8B0065DE1908B711002CA03F /* libxml2.2.dylib */,
 				8B0065DC1908B6BB002CA03F /* MessageUI.framework */,
 				8B0065DA1908B67F002CA03F /* Security.framework */,
@@ -681,6 +688,8 @@
 				8BB0E7FF18DAD2B900073A49 /* NSDateUtilities.m */,
 				8BE6D51C18AE0456008EC2B7 /* UIView+NibLoading.h */,
 				8BE6D51D18AE0456008EC2B7 /* UIView+NibLoading.m */,
+				8BC3769B191609C000CD1C17 /* UIViewController+IAd.h */,
+				8BC3769C191609C000CD1C17 /* UIViewController+IAd.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -724,7 +733,7 @@
 				8B3A880A190E337F0027EC59 /* DetailViewController.h */,
 				8B3A880B190E337F0027EC59 /* DetailViewController.m */,
 				8B943FF4189645CA0010BA5B /* BlogTableViewController.h */,
-				8B943FF5189645CA0010BA5B /* BlogTableViewController.m */,
+				8BC3769E19160BB700CD1C17 /* BlogTableViewController.m */,
 				8B2CC4F118A5FED1005A7898 /* AboutViewController.h */,
 				8B2CC4F218A5FED1005A7898 /* AboutViewController.m */,
 				8B1A59E818A85EF700FF41E2 /* BlogViewController.h */,
@@ -931,11 +940,12 @@
 				8B920DD81905142D00EC693B /* CommonLib.m in Sources */,
 				8B23ABED1885331E0090EFAE /* AllanXmlParse.m in Sources */,
 				8B0065CF1908B2B5002CA03F /* MBProgressHUD.m in Sources */,
-				8B943FF6189645CA0010BA5B /* BlogTableViewController.m in Sources */,
 				8B1C2F91188D18A000F4E0AA /* TestFile.m in Sources */,
 				8B2CC4F318A5FED1005A7898 /* AboutViewController.m in Sources */,
+				8BC3769D191609C000CD1C17 /* UIViewController+IAd.m in Sources */,
 				8BF6A0DE18616CD300BAE6A5 /* mtTableView.m in Sources */,
 				8B1DE7EB185A9DED009DEEC6 /* XYQAppDelegate.m in Sources */,
+				8BC3769F19160BB700CD1C17 /* BlogTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,7 +1090,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/ShareSDK/Extend/SinaWeiboSDK",
@@ -1121,7 +1131,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/ShareSDK/Extend/SinaWeiboSDK",

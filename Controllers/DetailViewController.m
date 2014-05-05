@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "WebViewPhoneCache.h"
 #import <ShareSDK/ShareSDK.h>
+#import "UIViewController+IAd.h"
 
 @interface DetailViewController ()
 
@@ -17,6 +18,10 @@
 @implementation DetailViewController
 
 @synthesize ArticleItem;
+
+@synthesize contentView;
+@synthesize adBannerView;
+@synthesize adBannerViewIsVisible;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

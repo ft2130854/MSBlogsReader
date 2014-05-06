@@ -20,37 +20,59 @@
         self.adBannerView.delegate=self;
         self.canDisplayBannerAds = YES;
         self.interstitialPresentationPolicy=ADInterstitialPresentationPolicyAutomatic;
+        [self.view addSubview:self.adBannerView];
         //[self requestInterstitialAdPresentation];
         
-//        CGSize size=  self.contentView.frame.size;
-       
+        //        CGSize size=  self.contentView.frame.size;
+        
         //        [self.adBannerView setRequiredContentSizeIdentifiers:[NSSet setWithObjects:ADBannerContentSizeIdentifier320x50,ADBannerContentSizeIdentifier480x32, nil]];
-//        [self.contentView addSubview:self.adBannerView];
-      
+        //        [self.contentView addSubview:self.adBannerView];
+        
+    }
+}
+-(void)viewDidAppear:(BOOL)animated{
+    if(self.class==[DetailViewController class]&&self.contentView){
+        [self layoutAnimated:NO];
     }
 }
 #pragma clang diagnostic pop
 #pragma mark ADBannerViewDelegate
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    if (!self.adBannerViewIsVisible) {
-        self.adBannerViewIsVisible = YES;
-        CGSize size=  self.contentView.frame.size;
-        banner.frame=CGRectMake(0, 0, size.width, size.height);
-//        for(id tmpView in [self.contentView subviews])
-//        {
-//            UIView *View = (UIView *)tmpView;
-//            [View removeFromSuperview];
-//                break;
-//        }
-        [self.contentView addSubview:self.adBannerView];
-        [self.contentView layoutIfNeeded];
+- (void)layoutAnimated:(BOOL)animated
+{
+    // As of iOS 6.0, the banner will automatically resize itself based on its width.
+    // To support iOS 5.0 however, we continue to set the currentContentSizeIdentifier appropriately.
+    CGRect contentFrame = self.contentView.bounds;
+    
+    //    if (contentFrame.size.width < contentFrame.size.height) {
+    //        self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    //    } else {
+    //        self.adBannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
+    //    }
+    
+    CGRect bannerFrame = self.adBannerView.frame;
+    if (self.adBannerView.bannerLoaded) {
+        contentFrame.size.height -= (self.adBannerView.frame.size.height+self.tabBarController.tabBar.frame.size.height);
+        bannerFrame.origin.y = contentFrame.size.height;
+    } else {
+        bannerFrame.origin.y = contentFrame.size.height;
     }
+    contentFrame.size.height+=self.tabBarController.tabBar.frame.size.height;
+    [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
+
+        ((UIWebView *)self.contentView).scrollView.frame = contentFrame;
+        [self.contentView layoutIfNeeded];
+        self.adBannerView.frame = bannerFrame;
+        NSLog(@"%f",((UIWebView *)self.contentView).scrollView.frame.size.height);
+    }];
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    [self layoutAnimated:YES];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    [self.adBannerView removeFromSuperview];
-     [self.contentView layoutIfNeeded];
+    [self layoutAnimated:YES];
 }
 @end

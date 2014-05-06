@@ -21,5 +21,6 @@
 
 @interface UIViewController (IAd)<ADBannerViewDelegate>
 
+- (void)layoutAnimated:(BOOL)animated;
 
 @end

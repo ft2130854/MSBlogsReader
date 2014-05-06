@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
     if (webView) {
         if (ArticleItem) {
             self.title=ArticleItem.Title;
@@ -43,6 +44,12 @@
         }
     }
     // Do any additional setup after loading the view from its nib.
+     UIView * vad=   (UIView *)self.view.subviews[1];
+    self.edgesForExtendedLayout=UIRectEdgeAll;
+
+    NSLog(@"%f",vad.frame.size.height);
+  
+    
 }
 
 -(IBAction)SocialShare:(id)sender{

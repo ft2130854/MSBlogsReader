@@ -14,4 +14,5 @@
 @property (weak,nonatomic)IBOutlet UILabel *LB_Title;
 @property (weak,nonatomic)IBOutlet UILabel *LB_PubTime;
 @property (weak,nonatomic)IBOutlet UIImage *IM_Avatar;
+
 @end

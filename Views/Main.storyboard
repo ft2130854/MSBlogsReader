@@ -108,7 +108,29 @@
                     <view key="view" contentMode="scaleToFill" id="hCs-1u-G0K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjs-Ms-Utz">
+                                <rect key="frame" x="60" y="169" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Buttonjdkslafj">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkq-EF-VJw">
+                                <rect key="frame" x="60" y="125" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bjs-Ms-Utz" firstAttribute="top" secondItem="fkq-EF-VJw" secondAttribute="bottom" constant="14" id="9m0-Rg-eM2"/>
+                            <constraint firstItem="bjs-Ms-Utz" firstAttribute="leading" secondItem="hCs-1u-G0K" secondAttribute="leading" constant="60" id="r83-lT-cfB"/>
+                            <constraint firstItem="bjs-Ms-Utz" firstAttribute="leading" secondItem="fkq-EF-VJw" secondAttribute="leading" id="sC3-pE-Tp8"/>
+                            <constraint firstItem="tkp-IF-M0I" firstAttribute="top" secondItem="bjs-Ms-Utz" secondAttribute="bottom" constant="320" id="xcs-VM-pVg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lJ2-8u-6fx"/>
                 </viewController>

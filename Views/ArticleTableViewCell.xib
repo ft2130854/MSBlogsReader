@@ -14,21 +14,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-eh-rb2" userLabel="Lb_title">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-eh-rb2" userLabel="Lb_title">
                         <rect key="frame" x="20" y="20" width="280" height="55"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="HTb-5Z-KWP"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZb-aw-P3o" userLabel="Lb_pubtime">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZb-aw-P3o" userLabel="Lb_pubtime">
                         <rect key="frame" x="20" y="83" width="280" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="VWB-bc-mcy"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="dZb-aw-P3o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="1kz-gJ-Wac"/>
+                    <constraint firstAttribute="bottom" secondItem="dZb-aw-P3o" secondAttribute="bottom" constant="20" symbolic="YES" id="51F-IT-Biz"/>
+                    <constraint firstAttribute="trailing" secondItem="dZb-aw-P3o" secondAttribute="trailing" constant="20" symbolic="YES" id="BgU-jN-f76"/>
+                    <constraint firstItem="dZb-aw-P3o" firstAttribute="top" secondItem="Yah-eh-rb2" secondAttribute="bottom" constant="8" id="OaS-Xt-SBt"/>
+                    <constraint firstItem="dZb-aw-P3o" firstAttribute="leading" secondItem="Yah-eh-rb2" secondAttribute="leading" id="PHO-Hz-SMo"/>
+                    <constraint firstItem="dZb-aw-P3o" firstAttribute="trailing" secondItem="Yah-eh-rb2" secondAttribute="trailing" id="vBj-Lx-lUJ"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="LB_PubTime" destination="dZb-aw-P3o" id="mpD-O1-6ra"/>

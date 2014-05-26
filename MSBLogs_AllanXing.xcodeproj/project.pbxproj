@@ -227,20 +227,20 @@
 		8B1C2F90188D18A000F4E0AA /* TestFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFile.m; sourceTree = "<group>"; };
 		8B1C2F92188D1FCC00F4E0AA /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		8B1C2F93188D1FCC00F4E0AA /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		8B1DE7D7185A9DED009DEEC6 /* MSBLogs_AllanXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSBLogs_AllanXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1DE7D7185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSBlogs_AllanXing.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1DE7DA185A9DED009DEEC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8B1DE7DC185A9DED009DEEC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8B1DE7DE185A9DED009DEEC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8B1DE7E2185A9DED009DEEC6 /* MSBLogs_AllanXing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSBLogs_AllanXing-Info.plist"; sourceTree = "<group>"; };
+		8B1DE7E2185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSBlogs_AllanXing.temp_caseinsensitive_rename-Info.plist"; sourceTree = "<group>"; };
 		8B1DE7E4185A9DED009DEEC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B1DE7E6185A9DED009DEEC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8B1DE7E8185A9DED009DEEC6 /* MSBLogs_AllanXing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSBLogs_AllanXing-Prefix.pch"; sourceTree = "<group>"; };
+		8B1DE7E8185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSBlogs_AllanXing.temp_caseinsensitive_rename-Prefix.pch"; sourceTree = "<group>"; };
 		8B1DE7E9185A9DED009DEEC6 /* XYQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYQAppDelegate.h; sourceTree = "<group>"; };
 		8B1DE7EA185A9DED009DEEC6 /* XYQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYQAppDelegate.m; sourceTree = "<group>"; };
 		8B1DE7EC185A9DED009DEEC6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8B1DE7F2185A9DED009DEEC6 /* MSBLogs_AllanXingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSBLogs_AllanXingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1DE7F2185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSBlogs_AllanXing.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1DE7F3185A9DED009DEEC6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8B1DE7FB185A9DED009DEEC6 /* MSBLogs_AllanXingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSBLogs_AllanXingTests-Info.plist"; sourceTree = "<group>"; };
+		8B1DE7FB185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSBlogs_AllanXing.temp_caseinsensitive_renameTests-Info.plist"; sourceTree = "<group>"; };
 		8B1DE7FD185A9DED009DEEC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B1DE7FF185A9DED009DEEC6 /* IOSExercise_allanxingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSExercise_allanxingTests.m; sourceTree = "<group>"; };
 		8B231D3718E01DEF001EB550 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data.plist; path = Resource/Data.plist; sourceTree = SOURCE_ROOT; };
@@ -586,8 +586,8 @@
 		8B1DE7D8185A9DED009DEEC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B1DE7D7185A9DED009DEEC6 /* MSBLogs_AllanXing.app */,
-				8B1DE7F2185A9DED009DEEC6 /* MSBLogs_AllanXingTests.xctest */,
+				8B1DE7D7185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename.app */,
+				8B1DE7F2185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -635,10 +635,10 @@
 		8B1DE7E1185A9DED009DEEC6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B1DE7E2185A9DED009DEEC6 /* MSBLogs_AllanXing-Info.plist */,
+				8B1DE7E2185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename-Info.plist */,
 				8B1DE7E3185A9DED009DEEC6 /* InfoPlist.strings */,
 				8B1DE7E6185A9DED009DEEC6 /* main.m */,
-				8B1DE7E8185A9DED009DEEC6 /* MSBLogs_AllanXing-Prefix.pch */,
+				8B1DE7E8185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 		8B1DE7FA185A9DED009DEEC6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B1DE7FB185A9DED009DEEC6 /* MSBLogs_AllanXingTests-Info.plist */,
+				8B1DE7FB185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests-Info.plist */,
 				8B1DE7FC185A9DED009DEEC6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -808,9 +808,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B1DE7D6185A9DED009DEEC6 /* MSBLogs_AllanXing */ = {
+		8B1DE7D6185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B1DE803185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBLogs_AllanXing" */;
+			buildConfigurationList = 8B1DE803185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBlogs_AllanXing.temp_caseinsensitive_rename" */;
 			buildPhases = (
 				8B1DE7D4185A9DED009DEEC6 /* Frameworks */,
 				8B1DE7D3185A9DED009DEEC6 /* Sources */,
@@ -820,14 +820,14 @@
 			);
 			dependencies = (
 			);
-			name = MSBLogs_AllanXing;
+			name = MSBlogs_AllanXing.temp_caseinsensitive_rename;
 			productName = IOSExercise_allanxing;
-			productReference = 8B1DE7D7185A9DED009DEEC6 /* MSBLogs_AllanXing.app */;
+			productReference = 8B1DE7D7185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B1DE7F1185A9DED009DEEC6 /* MSBLogs_AllanXingTests */ = {
+		8B1DE7F1185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B1DE806185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBLogs_AllanXingTests" */;
+			buildConfigurationList = 8B1DE806185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBlogs_AllanXing.temp_caseinsensitive_renameTests" */;
 			buildPhases = (
 				8B1DE7EE185A9DED009DEEC6 /* Sources */,
 				8B1DE7EF185A9DED009DEEC6 /* Frameworks */,
@@ -838,9 +838,9 @@
 			dependencies = (
 				8B1DE7F8185A9DED009DEEC6 /* PBXTargetDependency */,
 			);
-			name = MSBLogs_AllanXingTests;
+			name = MSBlogs_AllanXing.temp_caseinsensitive_renameTests;
 			productName = IOSExercise_allanxingTests;
-			productReference = 8B1DE7F2185A9DED009DEEC6 /* MSBLogs_AllanXingTests.xctest */;
+			productReference = 8B1DE7F2185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -858,7 +858,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B1DE7D2185A9DED009DEEC6 /* Build configuration list for PBXProject "MSBLogs_AllanXing" */;
+			buildConfigurationList = 8B1DE7D2185A9DED009DEEC6 /* Build configuration list for PBXProject "MSBlogs_AllanXing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -871,8 +871,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B1DE7D6185A9DED009DEEC6 /* MSBLogs_AllanXing */,
-				8B1DE7F1185A9DED009DEEC6 /* MSBLogs_AllanXingTests */,
+				8B1DE7D6185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename */,
+				8B1DE7F1185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_renameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -962,7 +962,7 @@
 /* Begin PBXTargetDependency section */
 		8B1DE7F8185A9DED009DEEC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8B1DE7D6185A9DED009DEEC6 /* MSBLogs_AllanXing */;
+			target = 8B1DE7D6185A9DED009DEEC6 /* MSBlogs_AllanXing.temp_caseinsensitive_rename */;
 			targetProxy = 8B1DE7F7185A9DED009DEEC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1083,13 +1083,13 @@
 					"$(PROJECT_DIR)/Vendor/ShareSDK/UI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IOSExercise_allanxing/MSBLogs_AllanXing-Prefix.pch";
+				GCC_PREFIX_HEADER = "IOSExercise_allanxing/MSBlogs_AllanXing.temp_caseinsensitive_rename-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/include/libxml2,
 				);
-				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
+				INFOPLIST_FILE = "IOSExercise_allanxing/MSBlogs_AllanXing.temp_caseinsensitive_rename-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1099,7 +1099,7 @@
 					"$(PROJECT_DIR)/Vendor/ShareSDK/Extend/YiXinSDK",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = MSBLogs_AllanXing;
+				PRODUCT_NAME = MSBlogs_AllanXing.temp_caseinsensitive_rename;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1124,13 +1124,13 @@
 					"$(PROJECT_DIR)/Vendor/ShareSDK/UI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IOSExercise_allanxing/MSBLogs_AllanXing-Prefix.pch";
+				GCC_PREFIX_HEADER = "IOSExercise_allanxing/MSBlogs_AllanXing.temp_caseinsensitive_rename-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/include/libxml2,
 				);
-				INFOPLIST_FILE = "IOSExercise_allanxing/MSBLogs_AllanXing-Info.plist";
+				INFOPLIST_FILE = "IOSExercise_allanxing/MSBlogs_AllanXing.temp_caseinsensitive_rename-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1140,7 +1140,7 @@
 					"$(PROJECT_DIR)/Vendor/ShareSDK/Extend/YiXinSDK",
 				);
 				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = MSBLogs_AllanXing;
+				PRODUCT_NAME = MSBlogs_AllanXing.temp_caseinsensitive_rename;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1163,8 +1163,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "IOSExercise_allanxingTests/MSBLogs_AllanXingTests-Info.plist";
-				PRODUCT_NAME = MSBLogs_AllanXingTests;
+				INFOPLIST_FILE = "IOSExercise_allanxingTests/MSBlogs_AllanXing.temp_caseinsensitive_renameTests-Info.plist";
+				PRODUCT_NAME = MSBlogs_AllanXing.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1181,8 +1181,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOSExercise_allanxing/IOSExercise_allanxing-Prefix.pch";
-				INFOPLIST_FILE = "IOSExercise_allanxingTests/MSBLogs_AllanXingTests-Info.plist";
-				PRODUCT_NAME = MSBLogs_AllanXingTests;
+				INFOPLIST_FILE = "IOSExercise_allanxingTests/MSBlogs_AllanXing.temp_caseinsensitive_renameTests-Info.plist";
+				PRODUCT_NAME = MSBlogs_AllanXing.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1191,7 +1191,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B1DE7D2185A9DED009DEEC6 /* Build configuration list for PBXProject "MSBLogs_AllanXing" */ = {
+		8B1DE7D2185A9DED009DEEC6 /* Build configuration list for PBXProject "MSBlogs_AllanXing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B1DE801185A9DED009DEEC6 /* Debug */,
@@ -1200,7 +1200,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B1DE803185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBLogs_AllanXing" */ = {
+		8B1DE803185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBlogs_AllanXing.temp_caseinsensitive_rename" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B1DE804185A9DED009DEEC6 /* Debug */,
@@ -1209,7 +1209,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B1DE806185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBLogs_AllanXingTests" */ = {
+		8B1DE806185A9DED009DEEC6 /* Build configuration list for PBXNativeTarget "MSBlogs_AllanXing.temp_caseinsensitive_renameTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B1DE807185A9DED009DEEC6 /* Debug */,

@@ -98,6 +98,28 @@ UIView *myView;
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UIDevice* device = [UIDevice currentDevice];
+    BOOL backgroundSupported = NO;
+    if ([device respondsToSelector:@selector(isMultitaskingSupported)])
+        backgroundSupported = device.multitaskingSupported;
+    
+    if (backgroundSupported) {
+        bgTask = [application beginBackgroundTaskWithExpirationHandler:^{
+            // Clean up any unfinished task business by marking where you
+            // stopped or ending the task outright.
+            [application endBackgroundTask:bgTask];
+            bgTask = UIBackgroundTaskInvalid;
+        }];
+        
+        // Start the long-running task and return immediately.
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            // Do the work associated with the task, preferably in chunks.
+            
+            [application endBackgroundTask:bgTask];
+            bgTask = UIBackgroundTaskInvalid;
+        });
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -113,6 +135,33 @@ UIView *myView;
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+}
+
+- (void)scheduleAlarmForDate:(NSDate*)theDate
+{
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray*    oldNotifications = [app scheduledLocalNotifications];
+    
+    // Clear out the old notification before scheduling a new one.
+    if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+    
+    // Create a new notification.
+    UILocalNotification* alarm = [[UILocalNotification alloc] init];
+    if (alarm)
+    {
+        alarm.fireDate = theDate;
+        alarm.timeZone = [NSTimeZone defaultTimeZone];
+        alarm.repeatInterval = 0;
+        alarm.soundName = @"default";
+        alarm.alertBody = @"Time to wake up!";
+        
+        [app scheduleLocalNotification:alarm];
+    }
 }
 
 @end

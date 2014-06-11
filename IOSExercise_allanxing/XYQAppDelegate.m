@@ -159,9 +159,10 @@ UIView *myView;
         alarm.repeatInterval = 0;
         alarm.soundName = @"default";
         alarm.alertBody = @"Time to wake up!";
-        
+        alarm.applicationIconBadgeNumber=1;
         [app scheduleLocalNotification:alarm];
     }
+    //[app cancelLocalNotification:alarm];
 }
 
 @end
